@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* All Phase Radon — Mountain Professional Design System
+   Deep forest green + slate/charcoal + warm white + amber accent
+   Colors defined in HSL to match tailwind.config token wrappers. */
+
+@layer base {
+  :root {
+    --background: 42 40% 99%;
+    --foreground: 200 22% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 22% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 22% 12%;
+
+    /* Deep forest green */
+    --primary: 152 34% 16%;
+    --primary-foreground: 42 40% 98%;
+
+    --secondary: 150 14% 92%;
+    --secondary-foreground: 152 34% 16%;
+
+    --muted: 150 12% 94%;
+    --muted-foreground: 200 10% 40%;
+
+    /* Warm amber accent */
+    --accent: 38 88% 52%;
+    --accent-foreground: 200 22% 12%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 42 40% 98%;
+
+    --border: 150 10% 87%;
+    --input: 150 10% 87%;
+    --ring: 152 34% 16%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 152 30% 18%;
+    --sidebar-foreground: 42 30% 92%;
+    --sidebar-primary: 38 88% 52%;
+    --sidebar-primary-foreground: 200 22% 12%;
+    --sidebar-accent: 152 24% 24%;
+    --sidebar-accent-foreground: 42 30% 92%;
+    --sidebar-border: 152 24% 26%;
+    --sidebar-ring: 38 88% 52%;
+
+    /* Brand extras */
+    --forest-deep: 152 38% 12%;
+    --forest: 152 34% 16%;
+    --forest-light: 152 24% 26%;
+    --charcoal: 200 20% 14%;
+    --slate: 200 12% 38%;
+    --amber: 38 88% 52%;
+    --amber-deep: 34 80% 44%;
+    --cream: 42 40% 99%;
+    --sand: 42 30% 92%;
+  }
+
+  .dark {
+    --background: 200 22% 9%;
+    --foreground: 42 40% 96%;
+
+    --card: 152 28% 12%;
+    --card-foreground: 42 40% 96%;
+
+    --popover: 152 28% 12%;
+    --popover-foreground: 42 40% 96%;
+
+    --primary: 38 88% 52%;
+    --primary-foreground: 200 22% 12%;
+
+    --secondary: 152 18% 20%;
+    --secondary-foreground: 42 40% 96%;
+
+    --muted: 152 16% 20%;
+    --muted-foreground: 42 14% 68%;
+
+    --accent: 38 88% 52%;
+    --accent-foreground: 200 22% 12%;
+
+    --destructive: 0 62% 42%;
+    --destructive-foreground: 42 40% 98%;
+
+    --border: 152 16% 24%;
+    --input: 152 16% 24%;
+    --ring: 38 88% 52%;
+    --sidebar-background: 152 30% 10%;
+    --sidebar-foreground: 42 30% 90%;
+    --sidebar-primary: 38 88% 52%;
+    --sidebar-primary-foreground: 200 22% 12%;
+    --sidebar-accent: 152 20% 18%;
+    --sidebar-accent-foreground: 42 30% 90%;
+    --sidebar-border: 152 20% 20%;
+    --sidebar-ring: 38 88% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+  .container-pro {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .prose-radon {
+    @apply prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
