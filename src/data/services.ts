@@ -12,6 +12,7 @@ export interface Service {
   sections: { heading: string; body: string }[];
   faqs: { q: string; a: string }[];
   relatedLocations: string[];
+  relatedBlogSlugs: string[];
 }
 
 export const services: Service[] = [
@@ -61,6 +62,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["evergreen-co", "conifer-co", "bailey-co"],
+    relatedBlogSlugs: ["how-to-read-radon-test-results", "diy-vs-professional-radon-test", "what-to-do-after-high-radon-test"],
   },
   {
     slug: "radon-mitigation",
@@ -110,6 +112,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["pine-co", "evergreen-co", "conifer-co"],
+    relatedBlogSlugs: ["does-radon-mitigation-work", "how-long-does-radon-mitigation-take", "radon-mitigation-cost-colorado"],
   },
   {
     slug: "crawl-space-encapsulation",
@@ -159,6 +162,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["pine-co", "idledale-co", "indian-hills-co"],
+    relatedBlogSlugs: ["foundation-types-radon-basement-crawlspace-slab", "does-radon-mitigation-work", "radon-levels-colorado-foothills"],
   },
   {
     slug: "radon-fan-replacement-repair",
@@ -206,6 +210,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["morrison-co", "conifer-co", "genesee-co"],
+    relatedBlogSlugs: ["does-radon-mitigation-work", "how-long-does-radon-mitigation-take", "how-to-read-radon-test-results"],
   },
   {
     slug: "post-mitigation-testing",
@@ -253,6 +258,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["evergreen-co", "morrison-co", "aspen-park-co"],
+    relatedBlogSlugs: ["how-to-read-radon-test-results", "does-radon-mitigation-work", "what-to-do-after-high-radon-test"],
   },
   {
     slug: "new-construction-radon-prevention",
@@ -300,6 +306,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["conifer-co", "evergreen-co", "aspen-park-co"],
+    relatedBlogSlugs: ["radon-new-construction-colorado", "foundation-types-radon-basement-crawlspace-slab", "colorado-radon-geology-granite-front-range"],
   },
   {
     slug: "real-estate-radon-services",
@@ -347,6 +354,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["evergreen-co", "morrison-co", "conifer-co"],
+    relatedBlogSlugs: ["colorado-radon-real-estate-disclosure-law", "how-to-read-radon-test-results", "what-to-do-after-high-radon-test"],
   },
   {
     slug: "commercial-radon-services",
@@ -394,6 +402,7 @@ export const services: Service[] = [
       },
     ],
     relatedLocations: ["evergreen-co", "idaho-springs-co", "conifer-co"],
+    relatedBlogSlugs: ["radon-levels-colorado-foothills", "colorado-radon-geology-granite-front-range", "does-radon-mitigation-work"],
   },
 ];
 
