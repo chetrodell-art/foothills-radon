@@ -15,11 +15,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "radon-levels-colorado-foothills",
     title: "Radon Levels in the Colorado Foothills: What the Data Really Says",
-    metaTitle: "Radon Levels in the Colorado Foothills | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon Levels in the Colorado Foothills | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Why Jefferson & Park County foothills homes test high for radon. Real data on Colorado radon levels, geology, and what it means for your home. Read more.",
     date: "2026-03-12",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Colorado ranks in the top 10 states for radon, and the foothills test on the high end. Here's what the data says about your home along the 285 corridor.",
     sections: [
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "The bottom line",
-        body: "The foothills' high radon levels aren't a fluke — they're a geological reality. But they're also a solvable problem. Test your home, understand your number, and if it's high, mitigate. All Phase Radon has installed hundreds of systems across Jefferson and Park Counties, and our follow-up tests consistently show dramatic reductions. Your home can be safe; the first step is knowing your number.",
+        body: "The foothills' high radon levels aren't a fluke — they're a geological reality. But they're also a solvable problem. Test your home, understand your number, and if it's high, mitigate. Foothills Radon Testing and Mitigation has installed hundreds of systems across Jefferson and Park Counties, and our follow-up tests consistently show dramatic reductions. Your home can be safe; the first step is knowing your number.",
       },
     ],
     faqs: [
@@ -62,17 +62,17 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "radon-mitigation-cost-colorado",
     title: "What Does Radon Mitigation Cost in Colorado? A Honest Breakdown",
-    metaTitle: "Radon Mitigation Cost in Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon Mitigation Cost in Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "How much does radon mitigation cost in Colorado? A straightforward breakdown of Front Range pricing, what drives cost, and what's included. Read more.",
     date: "2026-03-05",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Radon mitigation on the Front Range typically runs $1,500–$3,500. Here's an honest breakdown of what drives the price and what you should get for it.",
     sections: [
       {
         heading: "The short answer",
-        body: "On the Front Range and in the foothills, a radon mitigation system typically costs between $1,500 and $3,500. The range reflects your foundation type, the fan required, pipe routing complexity, and whether crawl space encapsulation is needed. At All Phase Radon, we give you a firm written estimate before any work begins — no surprise charges.",
+        body: "On the Front Range and in the foothills, a radon mitigation system typically costs between $1,500 and $3,500. The range reflects your foundation type, the fan required, pipe routing complexity, and whether crawl space encapsulation is needed. At Foothills Radon Testing and Mitigation, we give you a firm written estimate before any work begins — no surprise charges.",
       },
       {
         heading: "What drives the cost",
@@ -109,11 +109,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "colorado-radon-geology-granite-front-range",
     title: "Colorado's Radon Geology: Why the Front Range Is Built on a Gas Source",
-    metaTitle: "Colorado Radon Geology & Granite | All Phase Radon | Colorado Foothills",
+    metaTitle: "Colorado Radon Geology & Granite | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Why does Colorado have high radon? The geology of the Front Range — granite, uranium, and fractured rock — explained in plain English. Read more.",
     date: "2026-02-24",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     heroImage:
       "https://vibe.filesafe.space/1787162816986577987/assets/56dd78fc-bf68-470b-8dd4-83dba115be71.png",
     excerpt:
@@ -156,60 +156,80 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "radon-real-estate-colorado-disclosure-law",
-    title: "Colorado Radon Disclosure Law: What Buyers, Sellers, and Realtors Need to Know",
-    metaTitle: "Colorado Radon Disclosure Law | All Phase Radon | Colorado Foothills",
+    slug: "colorado-radon-real-estate-disclosure-law",
+    title: "Colorado Radon Disclosure Laws: What Homeowners, Buyers, Sellers & Realtors Need to Know",
+    metaTitle: "Colorado Radon Disclosure Laws for Real Estate | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
-      "Colorado requires radon disclosure in real estate transactions. What buyers, sellers, and realtors must know about radon testing and disclosure. Read more.",
+      "Colorado radon disclosure laws explained: what sellers must disclose, what buyers should request, how realtors stay compliant, and how to keep closings on track. Read more.",
     date: "2026-02-18",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
-      "Colorado law requires radon disclosure in real estate transactions. Here's what buyers, sellers, and agents need to know to stay compliant and keep deals moving.",
+      "The definitive guide to Colorado's radon disclosure requirements — what the law requires for sellers, buyers, and realtors, transaction timelines, and how to keep your closing on track.",
     sections: [
       {
-        heading: "What Colorado law requires",
-        body: "Colorado requires sellers to disclose known radon test results and the presence of any radon mitigation system in the property. The disclosure is part of the standard seller's property disclosure form. While Colorado doesn't mandate radon testing in every sale, the disclosure requirement means that if a seller knows about elevated radon — or has a mitigation system — that information must be shared with buyers.",
+        heading: "What Colorado law actually requires",
+        body: "Colorado law requires sellers to disclose known radon test results and the presence of any radon mitigation system in the property. This is part of the standard seller's property disclosure form. The key word is 'known' — if you've tested your home and have a result, or if a mitigation system is installed, you must share that information with prospective buyers. You are not required to test if you haven't, but you must be honest about what you do know.",
       },
       {
-        heading: "For buyers",
-        body: "As a buyer, you have the right to request a radon test during your inspection period, and it's strongly recommended in a Zone 1 state like Colorado. A 48-hour short-term continuous monitor test gives you a defensible number. If the level is above 4.0 pCi/L, you can negotiate mitigation as part of the sale — and a properly installed, warranted system often satisfies the contingency and lets the closing proceed.",
+        heading: "The source: Colorado's radon disclosure statute",
+        body: "Colorado's disclosure requirement stems from the state's real estate disclosure framework, which classifies radon as an environmental hazard that sellers must disclose if known. Unlike some states, Colorado does not mandate radon testing as a condition of sale — but once a seller has knowledge of a radon level or system, nondisclosure can create legal liability. This is why most foothills agents treat radon testing as a standard, expected part of the inspection period even though the law doesn't force it.",
       },
       {
-        heading: "For sellers",
-        body: "If you know your home has elevated radon or has a mitigation system, disclose it honestly. A documented, warranted mitigation system is a selling point, not a liability — it shows you've addressed a known foothills issue professionally. If you haven't tested, consider doing so before listing, so you can disclose with confidence or address any issue proactively rather than under a closing deadline.",
+        heading: "The transaction timeline",
+        body: "A typical radon contingency runs like this: the buyer orders a 48-hour short-term continuous monitor test during the inspection period. If the result is above 4.0 pCi/L, the buyer can request mitigation as a condition of the sale. The seller then has a window — often 5 to 10 days — to have a system installed and a post-install test run before the closing date. In a Zone 1 state where the average home tests at 6.4 pCi/L, radon testing is a standard part of most foothills inspection periods. We compress this timeline aggressively, often completing testing, mitigation, and post-install verification within the contingency window.",
       },
       {
-        heading: "For realtors",
-        body: "Radon is one of the most common inspection contingencies in foothills transactions. Working with a mitigation company that understands real estate timelines — fast testing, written reports, rapid installation, and transferable warranties — keeps your deals on track. Many foothills agents build radon into their standard inspection process and partner with a reliable mitigator to handle contingencies smoothly.",
+        heading: "What sellers need to do",
+        body: "If you've ever tested your home for radon, disclose the results — even if they were low. If a mitigation system is installed, disclose it, including any warranty information that may transfer to the buyer. A documented, warranted mitigation system is a selling point: it shows a known foothills issue has been professionally addressed. If you've never tested, you can honestly state that, though many buyers will request a test during their inspection period. Consider pre-listing testing so you can disclose with confidence or address any issue proactively rather than under a closing deadline.",
       },
       {
-        heading: "How All Phase Radon supports transactions",
-        body: "We specialize in real estate radon services: 48-hour tests with signed written reports, firm mitigation estimates, rapid installation before closing, post-install verification, and transferable warranties that give buyers confidence. We pick up the phone, meet your deadlines, and provide documentation that satisfies disclosure and contingency requirements. Visit our realtor partner page to learn more.",
+        heading: "What buyers should request",
+        body: "As a buyer in a Zone 1 state like Colorado, you have the right to request a radon test during your inspection period — and you should. A 48-hour short-term continuous monitor test gives you a defensible number. Don't rely on the seller's prior results, since radon levels can change over time and with home modifications. If the result is above 4.0 pCi/L, you can negotiate mitigation as part of the sale. A properly installed, warranted system usually satisfies the contingency and lets the closing proceed.",
+      },
+      {
+        heading: "What realtors need to know",
+        body: "Realtors play a key role in ensuring disclosure compliance and managing radon contingencies. Ensure sellers complete the disclosure accurately, advise buyers to request a radon test during inspection, and work with a mitigation company that understands real estate timelines. A high radon reading doesn't have to derail a sale — a fast, professional mitigation system with a transferable warranty usually satisfies the contingency and keeps the closing on schedule. Many foothills agents build radon into their standard inspection process and partner with a reliable mitigator. Visit our realtor partner page to learn more.",
+      },
+      {
+        heading: "How a mitigation system affects disclosure",
+        body: "If a mitigation system is installed — whether before listing or as a result of a buyer's contingency — it must be disclosed, along with any post-install test results and warranty information. This is a positive disclosure: it tells the buyer the home's radon has been professionally addressed. Foothills Radon Testing and Mitigation provides the documentation — signed reports, system specs, and warranty details — that makes this disclosure straightforward and gives buyers confidence.",
+      },
+      {
+        heading: "Keeping deals compliant and moving",
+        body: "The disclosure law isn't a trap — it's a framework for honest transactions. Disclose what you know, test if you haven't, and address any elevated results professionally. Foothills Radon Testing and Mitigation supports every side of the transaction with fast testing, written reports, rapid mitigation, transferable warranties, and clear documentation. When everyone understands the rules and works with the right partners, radon becomes a manageable part of the sale, not a dealbreaker.",
       },
     ],
     faqs: [
       {
-        q: "Is radon testing required for a home sale in Colorado?",
-        a: "Testing isn't mandatory, but disclosure of known radon levels and mitigation systems is. Most buyers request a radon test during the inspection period, and it's strongly recommended in Zone 1 Colorado.",
+        q: "Is radon testing required to sell a home in Colorado?",
+        a: "Testing isn't mandatory, but disclosure of known radon levels and mitigation systems is required. Most buyers request a test during the inspection period, and it's strongly recommended in Zone 1 Colorado.",
       },
       {
-        q: "Does a radon system hurt my home's value?",
-        a: "No — a documented, warranted mitigation system is often a selling point. It shows a known foothills issue has been professionally addressed, which gives buyers confidence.",
+        q: "Do I have to disclose a mitigation system when selling?",
+        a: "Yes. If a radon mitigation system is installed, it must be disclosed along with any warranty information. This is a positive disclosure that shows the home's radon has been professionally addressed.",
       },
       {
-        q: "Can a radon contingency kill a sale?",
-        a: "It doesn't have to. A fast, professional mitigation system with a transferable warranty usually satisfies the contingency and keeps the closing on schedule.",
+        q: "How fast can you test for a closing?",
+        a: "We typically schedule a 48-hour short-term continuous monitor test within a few days of contact, with a signed written report delivered shortly after retrieval — well inside most inspection windows.",
+      },
+      {
+        q: "Can you install mitigation before our closing date?",
+        a: "Yes — we prioritize real estate timelines and can often complete a mitigation installation within a week of a high test, with a post-install report for the transaction file.",
+      },
+      {
+        q: "Is the warranty transferable to the buyer?",
+        a: "Yes. Our mitigation systems come with a transferable warranty, which is a strong selling point and gives buyers confidence in the work.",
       },
     ],
   },
   {
     slug: "what-to-do-after-high-radon-test",
     title: "What to Do After a High Radon Test: A Step-by-Step Guide",
-    metaTitle: "What to Do After a High Radon Test | All Phase Radon | Colorado Foothills",
+    metaTitle: "What to Do After a High Radon Test | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Got a high radon test result? Here's exactly what to do next — confirm, understand your options, and decide on mitigation. Plain-English guide. Read more.",
     date: "2026-02-10",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "A high radon test can be alarming, but it's a solvable problem. Here's a calm, step-by-step guide to what to do after an elevated radon reading.",
     sections: [
@@ -227,7 +247,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Get a professional assessment",
-        body: "Contact a certified radon mitigator for an assessment. They'll look at your foundation type, your radon level, your home's construction, and the best mitigation approach. A reputable company will give you a firm written estimate, explain the system in plain English, and never pressure you. At All Phase Radon, we tell you honestly whether you need to mitigate now or can monitor first.",
+        body: "Contact a certified radon mitigator for an assessment. They'll look at your foundation type, your radon level, your home's construction, and the best mitigation approach. A reputable company will give you a firm written estimate, explain the system in plain English, and never pressure you. At Foothills Radon Testing and Mitigation, we tell you honestly whether you need to mitigate now or can monitor first.",
       },
       {
         heading: "Mitigate and verify",
@@ -256,11 +276,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "foundation-types-radon-basement-crawlspace-slab",
     title: "Foundation Types and Radon: Basements, Crawl Spaces, and Slabs Compared",
-    metaTitle: "Foundation Types & Radon Risk | All Phase Radon | Colorado Foothills",
+    metaTitle: "Foundation Types & Radon Risk | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "How your home's foundation — basement, crawl space, or slab — affects radon entry and mitigation. What foothills homeowners need to know. Read more.",
     date: "2026-02-02",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Your foundation type shapes both your radon risk and your mitigation approach. Here's how basements, crawl spaces, and slabs compare.",
     sections: [
@@ -282,7 +302,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Combination foundations",
-        body: "Many foothills homes, especially on sloped lots, have combination foundations — a basement under part of the house and a crawl space under another, or a walk-out basement with a slab addition. These require the most thoughtful mitigation design, often combining sub-slab and sub-membrane approaches. All Phase Radon assesses each zone of your foundation and designs a system that addresses all of them.",
+        body: "Many foothills homes, especially on sloped lots, have combination foundations — a basement under part of the house and a crawl space under another, or a walk-out basement with a slab addition. These require the most thoughtful mitigation design, often combining sub-slab and sub-membrane approaches. Foothills Radon Testing and Mitigation assesses each zone of your foundation and designs a system that addresses all of them.",
       },
       {
         heading: "The takeaway",
@@ -307,11 +327,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-long-does-radon-mitigation-take",
     title: "How Long Does Radon Mitigation Take? From Test to Clean Air",
-    metaTitle: "How Long Does Radon Mitigation Take | All Phase Radon | Colorado Foothills",
+    metaTitle: "How Long Does Radon Mitigation Take | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "How long does radon mitigation take? From testing to installation to verified results — a clear timeline for foothills homeowners. Read more.",
     date: "2026-01-26",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Most radon mitigation installs finish in one day. Here's the full timeline from first test to verified clean air, so you know what to expect.",
     sections: [
@@ -358,11 +378,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "diy-vs-professional-radon-test",
     title: "DIY vs. Professional Radon Testing: Which Is Right for You?",
-    metaTitle: "DIY vs Professional Radon Test | All Phase Radon | Colorado Foothills",
+    metaTitle: "DIY vs Professional Radon Test | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Should you DIY your radon test or hire a professional? Pros, cons, and when each makes sense for Colorado foothills homeowners. Read more.",
     date: "2026-01-20",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "DIY radon test kits are cheap and useful, but professional testing has advantages — especially for real estate. Here's how to choose.",
     sections: [
@@ -405,11 +425,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-read-radon-test-results",
     title: "How to Read Radon Test Results: Understanding Your pCi/L Number",
-    metaTitle: "How to Read Radon Test Results | All Phase Radon | Colorado Foothills",
+    metaTitle: "How to Read Radon Test Results | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "What does your radon test result mean? A plain-English guide to pCi/L, the EPA action level, and what to do with your number. Read more.",
     date: "2026-01-14",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Your radon test came back with a number — now what? Here's a plain-English guide to understanding pCi/L and what your result means for your home.",
     sections: [
@@ -452,11 +472,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "does-radon-mitigation-work",
     title: "Does Radon Mitigation Really Work? What the Data Shows",
-    metaTitle: "Does Radon Mitigation Work? | All Phase Radon | Colorado Foothills",
+    metaTitle: "Does Radon Mitigation Work? | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Does radon mitigation actually reduce radon levels? What the data shows, how SSD systems perform, and what to expect after install. Read more.",
     date: "2026-01-08",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Skeptical that a fan and some pipe can fix your radon problem? Here's what the data — and our own post-install tests — actually show.",
     sections: [
@@ -503,11 +523,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "radon-new-construction-colorado",
     title: "Radon in New Construction Colorado: Why Every New Foothills Home Needs Protection",
-    metaTitle: "Radon New Construction Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon New Construction Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Building a new home in Colorado? Why radon-resistant construction is essential in Zone 1, what it includes, and how it saves you thousands. Read more.",
     date: "2026-01-02",
-    author: "All Phase Radon",
+    author: "Foothills Radon Testing and Mitigation",
     excerpt:
       "Building a new foothills home? Installing radon protection during construction costs a fraction of a retrofit — and in Zone 1 Colorado, it's essential.",
     sections: [
@@ -529,7 +549,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Working with your builder",
-        body: "All Phase Radon coordinates with your general contractor or foundation crew, provides the design and materials, and inspects the rough-in before the slab is poured. We serve new builds throughout Jefferson and Park Counties, from custom homes in Evergreen and Conifer to new subdivisions along the 285 corridor. If you're planning a build, talk to us early — ideally before the foundation work begins.",
+        body: "Foothills Radon Testing and Mitigation coordinates with your general contractor or foundation crew, provides the design and materials, and inspects the rough-in before the slab is poured. We serve new builds throughout Jefferson and Park Counties, from custom homes in Evergreen and Conifer to new subdivisions along the 285 corridor. If you're planning a build, talk to us early — ideally before the foundation work begins.",
       },
     ],
     faqs: [
@@ -544,57 +564,6 @@ export const blogPosts: BlogPost[] = [
       {
         q: "Can a new home really have high radon?",
         a: "Yes. The geology beneath your new home doesn't care how recently it was built. In Zone 1 Colorado, even brand-new homes can test high — radon-resistant construction protects you from day one.",
-      },
-    ],
-  },
-  {
-    slug: "radon-colorado-disclosure-law-explained",
-    title: "Colorado Radon Disclosure Law Explained: What the Rules Actually Require",
-    metaTitle: "Colorado Radon Disclosure Law Explained | All Phase Radon | Colorado Foothills",
-    metaDescription:
-      "Colorado radon disclosure law explained in plain English. What sellers must disclose, what buyers should request, and how realtors stay compliant. Read more.",
-    date: "2025-12-28",
-    author: "All Phase Radon",
-    excerpt:
-      "Confused about Colorado's radon disclosure requirements? Here's a plain-English breakdown of what the law actually requires for sellers, buyers, and agents.",
-    sections: [
-      {
-        heading: "The core requirement: disclose what you know",
-        body: "Colorado law requires sellers to disclose known radon test results and the presence of any radon mitigation system in the property. This is part of the standard seller's property disclosure form. The key word is 'known' — if you've tested your home and have a result, or if a mitigation system is installed, you must share that information with prospective buyers. You are not required to test if you haven't, but you must be honest about what you do know.",
-      },
-      {
-        heading: "What sellers need to do",
-        body: "If you've ever tested your home for radon, disclose the results — even if they were low. If a mitigation system is installed, disclose it, including any warranty information that may transfer to the buyer. A documented, warranted system is a selling point: it shows a known foothills issue has been professionally addressed. If you've never tested, you can honestly state that, though many buyers will request a test during their inspection period.",
-      },
-      {
-        heading: "What buyers should request",
-        body: "As a buyer in a Zone 1 state like Colorado, you have the right to request a radon test during your inspection period — and you should. A 48-hour short-term continuous monitor test gives you a defensible number. If the seller has prior test results, review them, but recognize that radon levels can change over time and with home modifications, so a current test is always worthwhile. If the result is elevated, you can negotiate mitigation as part of the sale.",
-      },
-      {
-        heading: "What realtors need to know",
-        body: "Realtors play a key role in ensuring disclosure compliance and managing radon contingencies. Ensure sellers complete the disclosure accurately, advise buyers to request a radon test during inspection, and work with a mitigation company that understands real estate timelines. A high radon reading doesn't have to derail a sale — a fast, professional mitigation system with a transferable warranty usually satisfies the contingency and keeps the closing on schedule.",
-      },
-      {
-        heading: "How a mitigation system affects disclosure",
-        body: "If a mitigation system is installed — whether before listing or as a result of a buyer's contingency — it must be disclosed, along with any post-install test results and warranty information. This is a positive disclosure: it tells the buyer the home's radon has been professionally addressed. All Phase Radon provides the documentation — signed reports, system specs, and warranty details — that makes this disclosure straightforward and gives buyers confidence.",
-      },
-      {
-        heading: "Staying compliant and keeping deals moving",
-        body: "The disclosure law isn't a trap — it's a framework for honest transactions. Disclose what you know, test if you haven't, and address any elevated results professionally. All Phase Radon supports every side of the transaction with fast testing, written reports, rapid mitigation, transferable warranties, and clear documentation. When everyone understands the rules and works with the right partners, radon becomes a manageable part of the sale, not a dealbreaker.",
-      },
-    ],
-    faqs: [
-      {
-        q: "Is radon testing required to sell a home in Colorado?",
-        a: "Testing isn't mandatory, but disclosure of known radon levels and mitigation systems is required. Most buyers request a test during the inspection period, and it's strongly recommended in Zone 1 Colorado.",
-      },
-      {
-        q: "Do I have to disclose a mitigation system when selling?",
-        a: "Yes. If a radon mitigation system is installed, it must be disclosed along with any warranty information. This is a positive disclosure that shows the home's radon has been professionally addressed.",
-      },
-      {
-        q: "What if I've never tested my home for radon?",
-        a: "You can honestly state that you haven't tested. However, many buyers will request a radon test during their inspection period, so consider testing before listing to disclose with confidence.",
       },
     ],
   },
