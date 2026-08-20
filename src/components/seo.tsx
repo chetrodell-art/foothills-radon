@@ -58,7 +58,6 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: company.name,
   telephone: company.phone,
-  email: company.email,
   url: "/",
   image: ogImage,
   address: {
@@ -68,17 +67,12 @@ export const localBusinessSchema = {
     postalCode: "80470",
     addressCountry: "US",
   },
-  description: "Locally owned radon testing & mitigation serving the Jefferson County and Park County foothills along the HWY 285 corridor.",
+  description: "Foothills Radon Testing and Mitigation connects homeowners in the Jefferson County and Park County foothills with qualified radon testing and mitigation professionals along the HWY 285 corridor.",
   areaServed: [
     { "@type": "AdministrativeArea", name: "Jefferson County, CO" },
     { "@type": "AdministrativeArea", name: "Park County, CO" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "187",
-  },
-  openingHours: "Mo-Sa 07:00-18:00",
+  openingHours: "Mo-Sa 08:00-18:00",
 };
 
 export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
