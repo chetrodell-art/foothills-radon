@@ -8,13 +8,16 @@ export const company = {
   baseTown: "Pine, Colorado",
   baseAddress: "Pine, CO 80470",
   serviceRegion: "Jefferson County & Park County foothills along the HWY 285 corridor",
-  hours: "Mon–Sat, 7:00am – 6:00pm",
-  responseHours: "1 business hour",
-  yearsInBusiness: 12,
-  systemsInstalled: 1400,
+  hours: "Mon–Sat, 8:00am – 6:00pm",
+  responseHours: "2 business hours",
   rating: 4.9,
-  reviewCount: 187,
-  certifications: ["NRPP Certified", "DORA Registered", "Fully Insured", "Locally Owned"],
+  reviewCount: 150,
+  certifications: [
+    "NRPP Certified Professionals",
+    "20-Year Low Radon Guarantee",
+    "Fully Transferable Warranties",
+    "Decades of Combined Experience",
+  ],
 };
 
 export const stats = [
@@ -24,10 +27,10 @@ export const stats = [
 ];
 
 export const navLinks = [
-  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services", hasDropdown: "services" },
-  { label: "Service Area", to: "/locations", hasDropdown: "locations" },
+  { label: "Service Area", to: "/service-area", hasDropdown: "locations" },
+  { label: "How It Works", to: "/how-it-works" },
   { label: "Realtors", to: "/realtors" },
   { label: "Credentials", to: "/certifications" },
   { label: "Reviews", to: "/reviews" },
