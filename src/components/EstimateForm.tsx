@@ -111,7 +111,7 @@ export const EstimateForm = ({ variant = "card", title = "Get a Free Estimate" }
           {loading ? (
             <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</>
           ) : (
-            "Request My Free Estimate"
+            "Get Free Estimate"
           )}
         </Button>
         <p className="text-center text-xs text-muted-foreground">
