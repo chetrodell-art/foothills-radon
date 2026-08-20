@@ -1,14 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, Phone, CheckCircle2, MapPin, Star } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MapPin } from "lucide-react";
 import { SEO, breadcrumbSchema } from "@/components/seo";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
-import { EstimateForm } from "@/components/EstimateForm";
-import { ReviewSnippet } from "@/components/ReviewSnippet";
+
+
 import { serviceMap, services } from "@/data/services";
 import { locationMap } from "@/data/locations";
-import { blogPosts } from "@/data/blog";
+import { blogMap, blogPosts } from "@/data/blog";
 import { company } from "@/data/site";
 import NotFound from "./NotFound";
 import { LazyImage } from "@/components/LazyImage";
@@ -21,6 +21,7 @@ const ServicePage = () => {
   if (!service) return <NotFound />;
 
   const related = service.relatedLocations.map((s) => locationMap[s]).filter(Boolean);
+  const relatedPosts = service.relatedBlogSlugs.map((s) => blogMap[s]).filter(Boolean);
 
   return (
     <Layout>
@@ -91,23 +92,31 @@ const ServicePage = () => {
                 ))}
               </ul>
             </div>
-            <EstimateForm />
+            <Link to="/contact" className="block rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-accent hover:shadow-md">
+              <h3 className="font-heading text-lg font-bold text-primary">Get a Free Estimate</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Quick form — we respond within {company.responseHours}. No obligation.</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                Start here <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
           </aside>
         </div>
       </section>
 
-      {/* Reviews for this service */}
+      {/* CTA for this service */}
       <section className="py-12">
         <div className="container-pro">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="flex items-center justify-center gap-1">
-              {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
+          <div className="mx-auto max-w-2xl rounded-xl border border-border bg-card p-8 text-center shadow-sm">
+            <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Ready to Get Started?</h2>
+            <p className="mt-3 text-muted-foreground">We'll connect you with a qualified professional for your {service.shortTitle.toLowerCase()} needs. Call us or request a free estimate.</p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a href={company.phoneHref} className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 font-semibold text-accent-foreground hover:bg-accent/90">
+                <Phone className="h-4 w-4" /> {company.phone}
+              </a>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-primary px-5 py-2.5 font-semibold text-primary hover:bg-muted">
+                Free Estimate <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-            <h2 className="mt-3 font-heading text-2xl font-bold text-primary sm:text-3xl">What Our Customers Say</h2>
-            <p className="mt-2 text-muted-foreground">Real reviews from foothills homeowners who trusted us with their {service.shortTitle.toLowerCase()}.</p>
-          </div>
-          <div className="mt-8">
-            <ReviewSnippet service={service.shortTitle} count={2} />
           </div>
         </div>
       </section>
@@ -118,7 +127,7 @@ const ServicePage = () => {
           <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Related Resources</h2>
           <p className="mt-2 text-muted-foreground">Learn more about {service.shortTitle.toLowerCase()} and how it fits into protecting your foothills home.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.slice(0, 3).map((post) => (
+            {relatedPosts.map((post) => (
               <Link key={post.slug} to={`/blog/${post.slug}`} className="group rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-accent hover:shadow-md">
                 <h3 className="font-heading text-base font-bold text-primary group-hover:text-accent">{post.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
@@ -151,7 +160,8 @@ const ServicePage = () => {
         </div>
       </section>
 
-      <FAQ faqs={service.faqs} />
+            <FAQ faqs={service.faqs} />
+
 
       <section className="py-12">
         <div className="container-pro">
