@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://allphaseradon.com/sitemap.xml
+Sitemap: https://foothillsradon.com/sitemap.xml
