@@ -58,7 +58,7 @@ export const EstimateForm = ({ variant = "card", title = "Get a Free Estimate" }
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="phone">Phone *</Label>
-            <Input id="phone" name="phone" type="tel" required placeholder="(303) 555-0100" />
+            <Input id="phone" name="phone" type="tel" required placeholder="(303) 816-3130" />
           </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
