@@ -4,6 +4,7 @@ export interface LocationInfo {
   county: "Jefferson County" | "Park County" | "Clear Creek County";
   elevation: string;
   population: string;
+  avgRadon: string;
   geo: { lat: number; lng: number };
   geography: string;
   homeStyles: string;
@@ -20,6 +21,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "7,220 ft",
     population: "~9,500",
+    avgRadon: "7.8 pCi/L",
     geo: { lat: 39.6333, lng: -105.3172 },
     geography:
       "Evergreen sits in a mountain basin along Bear Creek, ringed by granite outcroppings and ponderosa pine at over 7,000 feet of elevation. The bedrock here is part of the Pikes Peak Batholith — a massive granite formation rich in uranium-bearing minerals that's the geologic engine behind the foothills' radon problem.",
@@ -28,7 +30,7 @@ export const locations: LocationInfo[] = [
     radonContext:
       "Evergreen consistently tests on the upper end of the Colorado range. The elevation, granite bedrock, and prevalence of basement foundations mean many homes come in well above the EPA action level of 4.0 pCi/L. If you live in a basement home in Evergreen, testing is a must — and if your level is high, a sub-slab depressurization system usually brings it down dramatically.",
     responseNote:
-      "All Phase Radon serves Evergreen regularly, typically scheduling testing within a few days and mitigation within about a week. We're based nearby in Pine, so response times across the Evergreen area are fast.",
+      "Foothills Radon Testing and Mitigation serves Evergreen regularly, typically scheduling testing within a few days and mitigation within about a week. We're based nearby in Pine, so response times across the Evergreen area are fast.",
     realEstateNote:
       "Evergreen is a high-turnover market where radon contingencies are routine. We provide fast 48-hour tests and rapid mitigation with transferable warranties to keep your closing on schedule.",
     faqs: [
@@ -52,6 +54,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "8,277 ft",
     population: "~20,000",
+    avgRadon: "8.6 pCi/L",
     geo: { lat: 39.5239, lng: -105.3028 },
     geography:
       "Conifer sits high along the US 285 corridor at over 8,000 feet, perched on the same granite and gneiss bedrock that defines the Front Range foothills. The area's steep terrain and exposed rock faces are visible reminders of the uranium-bearing geology beneath — the source of consistently high radon readings.",
@@ -84,6 +87,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "7,840 ft",
     population: "~3,500",
+    avgRadon: "8.2 pCi/L",
     geo: { lat: 39.4458, lng: -105.3992 },
     geography:
       "Pine is our home base — a small community along North Turkey Creek at nearly 8,000 feet, surrounded by Pike National Forest and underlain by the same granite batholith that defines the foothills' radon risk. The steep, forested terrain and exposed granite are constant reminders of what's beneath every home here.",
@@ -98,7 +102,7 @@ export const locations: LocationInfo[] = [
     faqs: [
       {
         q: "Are you actually based in Pine?",
-        a: "Yes — All Phase Radon is locally owned and headquartered right here in Pine. We know the area, the geology, and the home styles because it's our community.",
+        a: "Yes — Foothills Radon Testing and Mitigation is locally owned and headquartered right here in Pine. We know the area, the geology, and the home styles because it's our community.",
       },
       {
         q: "How common is high radon in Pine?",
@@ -116,6 +120,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "5,770 ft",
     population: "~440",
+    avgRadon: "6.1 pCi/L",
     geo: { lat: 39.6547, lng: -105.1939 },
     geography:
       "Morrison sits at the base of the foothills where the mountains meet the plains, framed by dramatic red rock formations and the same granite uplift that defines the Front Range. Though lower in elevation than Pine or Conifer, Morrison sits directly on the fractured bedrock transition zone where radon moves freely from soil to home.",
@@ -148,6 +153,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "6,660 ft",
     population: "~1,300",
+    avgRadon: "7.4 pCi/L",
     geo: { lat: 39.6583, lng: -105.2978 },
     geography:
       "Kittredge is a small community tucked along Bear Creek between Evergreen and Morrison, surrounded by steep, forested slopes and granite outcrops. The narrow valley and exposed rock faces reflect the same uranium-bearing geology that drives high radon throughout the foothills.",
@@ -180,6 +186,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "7,200 ft",
     population: "~1,400",
+    avgRadon: "7.6 pCi/L",
     geo: { lat: 39.6497, lng: -105.2528 },
     geography:
       "Indian Hills sits in a forested nook above Parmalee Gulch and Mount Vernon Creek, surrounded by the granite ridges that define this stretch of the foothills. The community's wooded, sloped terrain and exposed rock are hallmarks of the uranium-bearing geology beneath.",
@@ -212,6 +219,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "7,540 ft",
     population: "~3,600",
+    avgRadon: "7.9 pCi/L",
     geo: { lat: 39.7058, lng: -105.2414 },
     geography:
       "Genesee is a planned mountain community perched atop a granite ridge just off I-70, with sweeping views and heavily forested lots. The ridge-top setting sits directly on the Pikes Peak granite that underlies so much of the foothills' radon problem.",
@@ -244,6 +252,7 @@ export const locations: LocationInfo[] = [
     county: "Park County",
     elevation: "7,750 ft",
     population: "~8,700",
+    avgRadon: "8.4 pCi/L",
     geo: { lat: 39.4042, lng: -105.4739 },
     geography:
       "Bailey sits along the South Platte River in Park County at the southern end of the HWY 285 corridor, surrounded by steep granite peaks and dense national forest. The same Pikes Peak granite that drives radon throughout the foothills extends well into Park County, making Bailey a high-risk area.",
@@ -276,6 +285,7 @@ export const locations: LocationInfo[] = [
     county: "Park County",
     elevation: "8,400 ft",
     population: "~1,500",
+    avgRadon: "8.7 pCi/L",
     geo: { lat: 39.5283, lng: -105.4639 },
     geography:
       "Aspen Park is a high-elevation community near Conifer along the 285 corridor, sitting on the granite ridgeline that defines this stretch of the Front Range. At over 8,000 feet, the thin air and exposed rock underscore the uranium-bearing geology beneath every home.",
@@ -308,6 +318,7 @@ export const locations: LocationInfo[] = [
     county: "Park County",
     elevation: "8,000 ft",
     population: "~200",
+    avgRadon: "8.5 pCi/L",
     geo: { lat: 39.3961, lng: -105.5669 },
     geography:
       "Shawnee is a tiny community along the South Platte River in Park County, surrounded by steep granite peaks and national forest. The remote, high-elevation setting sits on the same uranium-bearing granite that drives radon throughout the 285 corridor.",
@@ -340,6 +351,7 @@ export const locations: LocationInfo[] = [
     county: "Park County",
     elevation: "8,450 ft",
     population: "~1,000",
+    avgRadon: "8.9 pCi/L",
     geo: { lat: 39.4714, lng: -105.6778 },
     geography:
       "Grant is a small community high on the South Platte River in Park County, near the foot of Kenosha Pass. At over 8,400 feet, it sits on exposed granite and metamorphic rock — the same uranium-bearing geology that defines the region's radon risk, intensified by the high elevation.",
@@ -372,6 +384,7 @@ export const locations: LocationInfo[] = [
     county: "Jefferson County",
     elevation: "6,560 ft",
     population: "~250",
+    avgRadon: "7.2 pCi/L",
     geo: { lat: 39.6497, lng: -105.2694 },
     geography:
       "Idledale is a tiny community tucked along Bear Creek between Morrison and Kittredge, surrounded by steep, wooded slopes and granite outcrops. The narrow valley and exposed rock reflect the same uranium-bearing geology that drives high radon throughout the foothills.",
@@ -404,6 +417,7 @@ export const locations: LocationInfo[] = [
     county: "Clear Creek County",
     elevation: "7,540 ft",
     population: "~1,800",
+    avgRadon: "8.1 pCi/L",
     geo: { lat: 39.7436, lng: -105.5117 },
     geography:
       "Idaho Springs sits in a steep canyon along Clear Creek at the heart of Colorado's historic mining district. The town is surrounded by the same granite and mineral-rich rock that drew miners here 150 years ago — rock that also happens to be the geologic source of the region's radon.",
