@@ -6,12 +6,13 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EstimateForm } from "@/components/EstimateForm";
 import { reviews, reviewStats } from "@/data/reviews";
 import { company } from "@/data/site";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Reviews = () => (
   <Layout>
     <SEO
-      title="Reviews & Testimonials | All Phase Radon | Colorado Foothills"
-      description="Read what foothills homeowners say about All Phase Radon. 4.9 stars from 187+ Google reviews across Pine, Conifer, Evergreen, Bailey & the 285 corridor."
+      title="Reviews & Testimonials | Foothills Radon Testing and Mitigation | Colorado Foothills"
+      description="Read what foothills homeowners say about Foothills Radon Testing and Mitigation. 4.9 stars from 187+ Google reviews across Pine, Conifer, Evergreen, Bailey & the 285 corridor."
       path="/reviews"
       schema={breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -22,13 +23,15 @@ const Reviews = () => (
 
     <section className="py-12">
       <div className="container-pro">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="flex items-center justify-center gap-1">
-            {[...Array(5)].map((_, i) => <Star key={i} className="h-8 w-8 fill-accent text-accent" />)}
+        <ScrollReveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="flex items-center justify-center gap-1">
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-8 w-8 fill-accent text-accent" />)}
+            </div>
+            <h1 className="mt-4 font-heading text-4xl font-bold text-primary sm:text-5xl">{reviewStats.average} Stars from {reviewStats.count} Neighbors</h1>
+            <p className="mt-4 text-lg text-muted-foreground">Real reviews from foothills homeowners we've helped with radon testing, mitigation, and crawl space encapsulation.</p>
           </div>
-          <h1 className="mt-4 font-heading text-4xl font-bold text-primary sm:text-5xl">{reviewStats.average} Stars from {reviewStats.count} Neighbors</h1>
-          <p className="mt-4 text-lg text-muted-foreground">Real reviews from foothills homeowners we've helped with radon testing, mitigation, and crawl space encapsulation.</p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
 
