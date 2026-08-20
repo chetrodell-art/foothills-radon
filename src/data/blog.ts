@@ -9,6 +9,7 @@ export interface BlogPost {
   heroImage?: string;
   sections: { heading: string; body: string }[];
   faqs?: { q: string; a: string }[];
+  relatedServiceSlugs: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -58,6 +59,7 @@ export const blogPosts: BlogPost[] = [
         a: "The EPA action level is 4.0 pCi/L. Many professionals recommend mitigation above 2.0 pCi/L because there is no truly safe level of radon exposure.",
       },
     ],
+    relatedServiceSlugs: ["radon-testing", "radon-mitigation"],
   },
   {
     slug: "radon-mitigation-cost-colorado",
@@ -105,6 +107,7 @@ export const blogPosts: BlogPost[] = [
         a: "Not necessarily. A well-designed system sized to your home and soil is what matters. We size the fan and suction points to your specific conditions — you pay for what you need, not more.",
       },
     ],
+    relatedServiceSlugs: ["radon-mitigation", "crawl-space-encapsulation"],
   },
   {
     slug: "colorado-radon-geology-granite-front-range",
@@ -154,6 +157,7 @@ export const blogPosts: BlogPost[] = [
         a: "Not on a human timescale. The uranium-bearing rock beneath the foothills has been there for over a billion years. What you can change is how your home handles the gas — that's what mitigation does.",
       },
     ],
+    relatedServiceSlugs: ["radon-testing", "radon-mitigation", "new-construction-radon-prevention"],
   },
   {
     slug: "colorado-radon-real-estate-disclosure-law",
@@ -221,6 +225,7 @@ export const blogPosts: BlogPost[] = [
         a: "Yes. Our mitigation systems come with a transferable warranty, which is a strong selling point and gives buyers confidence in the work.",
       },
     ],
+    relatedServiceSlugs: ["real-estate-radon-services", "radon-testing", "radon-mitigation"],
   },
   {
     slug: "what-to-do-after-high-radon-test",
@@ -272,6 +277,7 @@ export const blogPosts: BlogPost[] = [
         a: "A properly designed sub-slab depressurization system typically brings radon well below 2.0 pCi/L. We confirm every install with a post-mitigation test.",
       },
     ],
+    relatedServiceSlugs: ["radon-mitigation", "post-mitigation-testing", "radon-testing"],
   },
   {
     slug: "foundation-types-radon-basement-crawlspace-slab",
@@ -323,6 +329,7 @@ export const blogPosts: BlogPost[] = [
         a: "Combination foundations need a tailored approach, often combining sub-slab depressurization for the basement and encapsulation with sub-membrane depressurization for the crawl space. We design for both zones.",
       },
     ],
+    relatedServiceSlugs: ["crawl-space-encapsulation", "radon-mitigation", "new-construction-radon-prevention"],
   },
   {
     slug: "how-long-does-radon-mitigation-take",
@@ -374,6 +381,7 @@ export const blogPosts: BlogPost[] = [
         a: "In most cases yes. We prioritize real estate timelines and can often compress testing, mitigation, and post-install verification into the inspection window.",
       },
     ],
+    relatedServiceSlugs: ["radon-mitigation", "post-mitigation-testing", "real-estate-radon-services"],
   },
   {
     slug: "diy-vs-professional-radon-test",
@@ -421,6 +429,7 @@ export const blogPosts: BlogPost[] = [
         a: "Contact a certified radon mitigator for a professional assessment and estimate. You may also want a professional confirmation test, especially if the DIY result was borderline.",
       },
     ],
+    relatedServiceSlugs: ["radon-testing", "real-estate-radon-services"],
   },
   {
     slug: "how-to-read-radon-test-results",
@@ -468,6 +477,7 @@ export const blogPosts: BlogPost[] = [
         a: "It's worth a conversation. Many professionals recommend mitigation above 2.0 pCi/L. A long-term test can confirm your year-round exposure before you decide. We're happy to help you weigh it.",
       },
     ],
+    relatedServiceSlugs: ["radon-testing", "radon-mitigation", "post-mitigation-testing"],
   },
   {
     slug: "does-radon-mitigation-work",
@@ -519,6 +529,7 @@ export const blogPosts: BlogPost[] = [
         a: "With basic maintenance — checking the manometer twice a year and re-testing every two years — a quality system protects your home for decades. The fan typically lasts 5 to 10 years before replacement.",
       },
     ],
+    relatedServiceSlugs: ["radon-mitigation", "radon-fan-replacement-repair", "post-mitigation-testing"],
   },
   {
     slug: "radon-new-construction-colorado",
@@ -566,6 +577,7 @@ export const blogPosts: BlogPost[] = [
         a: "Yes. The geology beneath your new home doesn't care how recently it was built. In Zone 1 Colorado, even brand-new homes can test high — radon-resistant construction protects you from day one.",
       },
     ],
+    relatedServiceSlugs: ["new-construction-radon-prevention", "radon-testing", "radon-mitigation"],
   },
 ];
 
