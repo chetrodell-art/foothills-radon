@@ -5,12 +5,14 @@ import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EstimateForm } from "@/components/EstimateForm";
 import { company, techImage } from "@/data/site";
+import { LazyImage } from "@/components/LazyImage";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const About = () => (
   <Layout>
     <SEO
-      title="About All Phase Radon | All Phase Radon | Colorado Foothills"
-      description="Meet All Phase Radon — a locally owned, NRPP-certified radon testing & mitigation company based in Pine, CO serving the Jefferson & Park County foothills."
+      title="About Foothills Radon Testing and Mitigation | Colorado Foothills"
+      description="Meet Foothills Radon Testing and Mitigation — a locally owned, NRPP-certified radon testing & mitigation company based in Pine, CO serving the Jefferson & Park County foothills."
       path="/about"
       schema={[localBusinessSchema, breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -21,18 +23,22 @@ const About = () => (
 
     <section className="py-12">
       <div className="container-pro grid items-center gap-10 lg:grid-cols-2">
-        <div>
-          <h1 className="font-heading text-4xl font-bold text-primary sm:text-5xl">About All Phase Radon</h1>
-          <p className="mt-5 text-lg text-muted-foreground">
-            We're not a national franchise or a call center. All Phase Radon is a locally owned radon testing and mitigation company based right here in Pine, Colorado. We live in the same foothills you do, we breathe the same air, and we've spent over a decade making it safer — one home at a time.
-          </p>
-          <p className="mt-4 text-muted-foreground">
-            We started All Phase Radon because we saw too many foothills families living with radon levels they didn't know about — in a state that ranks in the top 10 nationwide and sits entirely in EPA Radon Zone 1. The geology under our homes is the problem, but the solution is straightforward: test, and if the number is high, mitigate. We make that process honest, affordable, and local.
-          </p>
-        </div>
-        <div className="overflow-hidden rounded-xl shadow-lg">
-          <img src={techImage} alt="All Phase Radon technician installing a mitigation system on a Colorado foothills home" className="h-full w-full object-cover" loading="lazy" />
-        </div>
+        <ScrollReveal>
+          <div>
+            <h1 className="font-heading text-4xl font-bold text-primary sm:text-5xl">About Foothills Radon Testing and Mitigation</h1>
+            <p className="mt-5 text-lg text-muted-foreground">
+              We're not a national franchise or a call center. Foothills Radon Testing and Mitigation is a locally owned radon testing and mitigation company based right here in Pine, Colorado. We live in the same foothills you do, we breathe the same air, and we've spent over a decade making it safer — one home at a time.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              We started Foothills Radon Testing and Mitigation because we saw too many foothills families living with radon levels they didn't know about — in a state that ranks in the top 10 nationwide and sits entirely in EPA Radon Zone 1. The geology under our homes is the problem, but the solution is straightforward: test, and if the number is high, mitigate. We make that process honest, affordable, and local.
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={200}>
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <LazyImage src={techImage} alt="Foothills Radon technician installing a mitigation system on a Colorado foothills home" className="h-full w-full object-cover" />
+          </div>
+        </ScrollReveal>
       </div>
     </section>
 
@@ -78,6 +84,9 @@ const About = () => (
             </div>
           ))}
         </div>
+        <Link to="/certifications" className="mt-6 inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+          See full certifications & warranty details <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
     </section>
 
