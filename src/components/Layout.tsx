@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Star, Menu, X, ShieldCheck, ChevronDown, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Menu, X, ShieldCheck, ChevronDown, MapPin, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { company, navLinks } from "@/data/site";
 import { services } from "@/data/services";
@@ -93,19 +93,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="hidden bg-primary text-primary-foreground md:block">
         <div className="container-pro flex items-center justify-between py-1.5 text-xs">
           <div className="flex items-center gap-4">
-            {company.certifications.map((c) => (
-              <span key={c} className="flex items-center gap-1">
-                <ShieldCheck className="h-3.5 w-3.5 text-accent" />
-                {c}
-              </span>
-            ))}
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="h-3.5 w-3.5 text-accent" />
+              Connecting Foothills Homeowners with Qualified Radon Professionals
+            </span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1">
-              <Star className="h-3.5 w-3.5 fill-accent text-accent" />
-              {company.rating} ({company.reviewCount} reviews)
-            </span>
-            <span>·</span>
             <span>Responds within {company.responseHours}</span>
           </div>
         </div>
@@ -234,16 +227,8 @@ const Footer = () => (
       <div>
         <div className="font-heading text-lg font-bold">Foothills Radon</div>
         <p className="mt-2 text-sm text-primary-foreground/80">
-          Locally owned radon testing & mitigation serving the Jefferson County and Park County foothills along the HWY 285 corridor.
+          We connect homeowners in the Jefferson County and Park County foothills with qualified radon testing and mitigation professionals along the HWY 285 corridor.
         </p>
-        <div className="mt-3 flex items-center gap-1 text-sm">
-          <Star className="h-4 w-4 fill-accent text-accent" />
-          <Star className="h-4 w-4 fill-accent text-accent" />
-          <Star className="h-4 w-4 fill-accent text-accent" />
-          <Star className="h-4 w-4 fill-accent text-accent" />
-          <Star className="h-4 w-4 fill-accent text-accent" />
-          <span className="ml-1 text-primary-foreground/80">{company.rating} on Google</span>
-        </div>
       </div>
       <div>
         <div className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">Services</div>
@@ -260,6 +245,7 @@ const Footer = () => (
         <div className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">Company</div>
         <ul className="mt-3 space-y-2 text-sm text-primary-foreground/80">
           <li><Link to="/about" className="hover:text-accent">About</Link></li>
+          <li><Link to="/how-it-works" className="hover:text-accent">How It Works</Link></li>
           <li><Link to="/locations" className="hover:text-accent">Service Areas</Link></li>
           <li><Link to="/blog" className="hover:text-accent">Resources</Link></li>
           <li><Link to="/certifications" className="hover:text-accent">Credentials</Link></li>
@@ -272,7 +258,6 @@ const Footer = () => (
         <div className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">Contact</div>
         <ul className="mt-3 space-y-2 text-sm text-primary-foreground/80">
           <li><a href={company.phoneHref} className="hover:text-accent">{company.phone}</a></li>
-          <li><a href={company.emailHref} className="hover:text-accent">{company.email}</a></li>
           <li>{company.baseAddress}</li>
           <li>{company.hours}</li>
         </ul>
@@ -283,13 +268,13 @@ const Footer = () => (
     </div>
     <div className="border-t border-primary-foreground/15 py-4">
       <div className="container-pro flex flex-col items-center justify-between gap-2 text-xs text-primary-foreground/60 sm:flex-row">
-        <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>
-        <span>Licensed · NRPP Certified · Insured · Locally Owned</span>
+<span>© {new Date().getFullYear()} {company.name}. All rights reserved. · <Link to="/terms" className="hover:text-accent">Terms of Service</Link> · <Link to="/privacy" className="hover:text-accent">Privacy Policy</Link></span>
+        <span>Connecting Foothills Homeowners with Radon Mitigation Specialists</span>
         <a
           href="https://frameworkdigitaldesign.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary-foreground/40 transition hover:text-accent"
+          className="text-accent transition hover:text-accent/80"
         >
           Like our site? Let us build one for you.
         </a>
