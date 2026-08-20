@@ -23,11 +23,11 @@ export const services: Service[] = [
     tagline: "Know your number before you decide.",
     excerpt:
       "Short-term and long-term radon testing for foothills homes — accurate, EPA-compliant, and the honest first step before any system gets installed.",
-    metaTitle: "Radon Testing in Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon Testing in Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Professional radon testing for Jefferson & Park County homes. Short-term & long-term EPA-compliant kits. Get your real number before you mitigate. Free estimates.",
     intro:
-      "You can't see, smell, or taste radon — and in the Colorado foothills, the only way to know your level is to test. All Phase Radon offers both short-term and long-term testing using EPA-approved continuous monitors and passive devices, so you get a real number, not a guess. We test for homeowners, buyers, sellers, and real estate transactions across the HWY 285 corridor.",
+      "You can't see, smell, or taste radon — and in the Colorado foothills, the only way to know your level is to test. Foothills Radon Testing and Mitigation offers both short-term and long-term testing using EPA-approved continuous monitors and passive devices, so you get a real number, not a guess. We test for homeowners, buyers, sellers, and real estate transactions across the HWY 285 corridor.",
     sections: [
       {
         heading: "Why testing matters in the foothills",
@@ -43,7 +43,7 @@ export const services: Service[] = [
       },
       {
         heading: "What's included",
-        body: "Every All Phase Radon test includes placement of an EPA-approved device, closed-house conditions guidance, retrieval, lab analysis, and a written report with your pCi/L reading and a recommendation. Real estate tests include a signed report suitable for transaction disclosures. We serve homeowners, buyers, sellers, and agents throughout Jefferson and Park Counties.",
+        body: "Every Foothills Radon test includes placement of an EPA-approved device, closed-house conditions guidance, retrieval, lab analysis, and a written report with your pCi/L reading and a recommendation. Real estate tests include a signed report suitable for transaction disclosures. We serve homeowners, buyers, sellers, and agents throughout Jefferson and Park Counties.",
       },
     ],
     faqs: [
@@ -70,7 +70,7 @@ export const services: Service[] = [
     tagline: "The gold standard, done right.",
     excerpt:
       "Sub-slab depressurization systems designed and installed for foothills homes — most jobs finish in one day and drop radon below 2.0 pCi/L.",
-    metaTitle: "Radon Mitigation Systems Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon Mitigation Systems Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Sub-slab depressurization radon mitigation for Jefferson & Park County homes. Most installs done in one day. Drop radon below 2.0 pCi/L. Free estimates.",
     heroImage:
@@ -92,7 +92,7 @@ export const services: Service[] = [
       },
       {
         heading: "Cost and warranty",
-        body: "Radon mitigation systems on the Front Range typically cost between $1,500 and $3,500, depending on foundation complexity, fan requirements, and routing. Every All Phase Radon system includes a written warranty and a post-installation test recommendation so you can confirm your levels dropped. We're upfront about pricing — you'll get a firm estimate before any work starts.",
+        body: "Radon mitigation systems on the Front Range typically cost between $1,500 and $3,500, depending on foundation complexity, fan requirements, and routing. Every Foothills Radon system includes a written warranty and a post-installation test recommendation so you can confirm your levels dropped. We're upfront about pricing — you'll get a firm estimate before any work starts.",
       },
     ],
     faqs: [
@@ -119,7 +119,7 @@ export const services: Service[] = [
     tagline: "Seal the ground, stop the gas.",
     excerpt:
       "Vapor barrier encapsulation and sub-membrane depressurization for dirt and stone crawl spaces common in older foothills homes.",
-    metaTitle: "Crawl Space Encapsulation Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Crawl Space Encapsulation Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Crawl space encapsulation & sub-membrane radon systems for Jefferson & Park County homes. Seal dirt crawl spaces against radon and moisture. Free estimates.",
     heroImage:
@@ -161,18 +161,18 @@ export const services: Service[] = [
     relatedLocations: ["pine-co", "idledale-co", "indian-hills-co"],
   },
   {
-    slug: "fan-replacement-repair",
+    slug: "radon-fan-replacement-repair",
     title: "Radon Fan Replacement & Repair",
-    shortTitle: "Fan Replacement & Repair",
+    shortTitle: "Radon Fan Replacement & Repair",
     icon: "Wrench",
     tagline: "Quiet, efficient, and running again.",
     excerpt:
       "Replacement fans, vibration fixes, and system repairs for existing radon systems across the foothills — often same-week.",
-    metaTitle: "Radon Fan Replacement & Repair Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Radon Fan Replacement & Repair Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Radon fan replacement, vibration repair & system service for Jefferson & Park County homes. Quiet, efficient fans. Fast scheduling. Free estimates.",
     intro:
-      "If your radon system is humming loudly, rattling, or the manometer reads flat, your fan may be failing. Radon fans typically last 5 to 10 years, and when one quits your home is unprotected. All Phase Radon replaces and repairs fans for any system — ours or someone else's — across Jefferson and Park Counties, often within the same week you call.",
+      "If your radon system is humming loudly, rattling, or the manometer reads flat, your fan may be failing. Radon fans typically last 5 to 10 years, and when one quits your home is unprotected. Foothills Radon Testing and Mitigation replaces and repairs fans for any system — ours or someone else's — across Jefferson and Park Counties, often within the same week you call.",
     sections: [
       {
         heading: "Signs your radon fan needs service",
@@ -188,7 +188,7 @@ export const services: Service[] = [
       },
       {
         heading: "We service any system",
-        body: "You don't need to have bought your system from us. All Phase Radon services and replaces fans on radon systems installed by any contractor throughout the foothills. Bring us your manometer reading and your last test result and we'll tell you where you stand.",
+        body: "You don't need to have bought your system from us. Foothills Radon services and replaces fans on radon systems installed by any contractor throughout the foothills. Bring us your manometer reading and your last test result and we'll tell you where you stand.",
       },
     ],
     faqs: [
@@ -215,7 +215,7 @@ export const services: Service[] = [
     tagline: "Prove it worked.",
     excerpt:
       "Independent follow-up testing to confirm your mitigation system brought radon below action level — required for real estate and recommended for every install.",
-    metaTitle: "Post-Mitigation Radon Testing Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Post-Mitigation Radon Testing Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Post-mitigation radon testing to confirm your system works. Independent follow-up tests for Jefferson & Park County homes and real estate closings. Free estimates.",
     intro:
@@ -262,11 +262,11 @@ export const services: Service[] = [
     tagline: "Build it out from day one.",
     excerpt:
       "Passive radon systems and active-ready rough-ins for new foothills homes — far cheaper to install during construction than to retrofit later.",
-    metaTitle: "New Construction Radon Prevention Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "New Construction Radon Prevention Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Passive radon systems & active-ready rough-ins for new homes in Jefferson & Park County. Install during construction and save thousands. Free estimates.",
     intro:
-      "If you're building a new home in the foothills, installing radon-resistant construction features during the build is dramatically cheaper than retrofitting a system later — and in a Zone 1 state like Colorado, it's one of the smartest investments you can make. All Phase Radon works with builders and homeowners to install passive and active-ready radon systems from the ground up.",
+      "If you're building a new home in the foothills, installing radon-resistant construction features during the build is dramatically cheaper than retrofitting a system later — and in a Zone 1 state like Colorado, it's one of the smartest investments you can make. Foothills Radon Testing and Mitigation works with builders and homeowners to install passive and active-ready radon systems from the ground up.",
     sections: [
       {
         heading: "What radon-resistant construction includes",
@@ -309,11 +309,11 @@ export const services: Service[] = [
     tagline: "Keep your closing on track.",
     excerpt:
       "Fast radon testing, mitigation, and post-install verification for buyers, sellers, and realtors — with written reports and transferable warranties.",
-    metaTitle: "Real Estate Radon Services Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Real Estate Radon Services Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Fast radon testing & mitigation for Colorado real estate closings. Written reports, transferable warranties, quick scheduling for realtors. Free estimates.",
     intro:
-      "Colorado law requires radon disclosure in real estate transactions, and radon is one of the most common inspection contingencies in foothills home sales. All Phase Radon specializes in keeping closings on track with fast testing, rapid mitigation, written reports, and transferable warranties that give buyers confidence and sellers a clean disclosure.",
+      "Colorado law requires radon disclosure in real estate transactions, and radon is one of the most common inspection contingencies in foothills home sales. Foothills Radon Testing and Mitigation specializes in keeping closings on track with fast testing, rapid mitigation, written reports, and transferable warranties that give buyers confidence and sellers a clean disclosure.",
     sections: [
       {
         heading: "Colorado's radon disclosure law",
@@ -356,11 +356,11 @@ export const services: Service[] = [
     tagline: "Protect your tenants, your staff, and your liability.",
     excerpt:
       "Radon testing and mitigation for schools, offices, daycare centers, and commercial buildings across the foothills and Front Range.",
-    metaTitle: "Commercial Radon Testing & Mitigation Colorado | All Phase Radon | Colorado Foothills",
+    metaTitle: "Commercial Radon Testing & Mitigation Colorado | Foothills Radon Testing and Mitigation | Colorado Foothills",
     metaDescription:
       "Commercial radon testing & mitigation for schools, offices & businesses in Jefferson & Park County. Protect occupants and limit liability. Free estimates.",
     intro:
-      "Radon isn't just a residential issue. Schools, daycare centers, offices, and commercial buildings in the Colorado foothills sit on the same granite geology as homes — and employers and property owners have a duty to test and mitigate. All Phase Radon provides commercial radon testing and mitigation scaled to your building and your occupancy.",
+      "Radon isn't just a residential issue. Schools, daycare centers, offices, and commercial buildings in the Colorado foothills sit on the same granite geology as homes — and employers and property owners have a duty to test and mitigate. Foothills Radon Testing and Mitigation provides commercial radon testing and mitigation scaled to your building and your occupancy.",
     sections: [
       {
         heading: "Who should test",
