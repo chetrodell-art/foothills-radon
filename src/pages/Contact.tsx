@@ -4,12 +4,13 @@ import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EstimateForm } from "@/components/EstimateForm";
 import { company } from "@/data/site";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Contact = () => (
   <Layout>
     <SEO
-      title="Free Estimate & Contact | All Phase Radon | Colorado Foothills"
-      description="Get a free radon testing or mitigation estimate in the Colorado foothills. Call (303) 555-0142 or fill out our quick form. We respond within 1 business hour."
+      title="Free Estimate & Contact | Foothills Radon Testing and Mitigation | Colorado Foothills"
+      description="Get a free radon testing or mitigation estimate in the Colorado foothills. Call (303) 816-3130 or fill out our quick form. We respond within 1 business hour."
       path="/contact"
       schema={breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -20,7 +21,7 @@ const Contact = () => (
 
     <section className="py-12">
       <div className="container-pro grid items-start gap-10 lg:grid-cols-2">
-        <div>
+        <ScrollReveal>
           <h1 className="font-heading text-4xl font-bold text-primary sm:text-5xl">Get a Free Estimate</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Tell us about your home and we'll call you back within {company.responseHours}. Whether you need a radon test, a mitigation estimate, or just have a question — we're local and we answer the phone.
@@ -60,8 +61,10 @@ const Contact = () => (
               <span key={c} className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-accent" /> {c}</span>
             ))}
           </div>
-        </div>
-        <EstimateForm variant="section" />
+        </ScrollReveal>
+        <ScrollReveal delay={200}>
+          <EstimateForm variant="section" />
+        </ScrollReveal>
       </div>
     </section>
   </Layout>
