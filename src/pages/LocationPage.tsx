@@ -1,14 +1,16 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, Phone, MapPin, Building2, Mountain, Home, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, MapPin, Building2, Mountain, Home, CheckCircle2, Star } from "lucide-react";
 import { SEO, breadcrumbSchema, localBusinessSchema } from "@/components/seo";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
 import { EstimateForm } from "@/components/EstimateForm";
+import { ReviewSnippet } from "@/components/ReviewSnippet";
 import { locationMap, locations } from "@/data/locations";
 import { services } from "@/data/services";
 import { company } from "@/data/site";
 import NotFound from "./NotFound";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const LocationPage = () => {
   const { slug } = useParams();
@@ -33,34 +35,38 @@ const LocationPage = () => {
   return (
     <Layout>
       <SEO
-        title={`Radon Mitigation & Testing in ${loc.town}, CO | All Phase Radon | Colorado Foothills`}
+        title={`Radon Mitigation & Testing in ${loc.town}, CO | Foothills Radon Testing and Mitigation | Colorado Foothills`}
         description={`Professional radon testing & mitigation in ${loc.town}, CO. ${loc.county} foothills homes test high — get your free estimate. NRPP certified, locally owned, one-day installs.`}
         path={`/locations/${loc.slug}`}
         schema={[locationSchema, breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Service Area", path: "/service-area" },
+          { name: "Service Areas", path: "/locations" },
           { name: `${loc.town}, CO`, path: `/locations/${loc.slug}` },
         ])]}
       />
-      <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Service Area", path: "/service-area" }, { name: `${loc.town}, CO` }]} />
+      <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Service Areas", path: "/locations" }, { name: `${loc.town}, CO` }]} />
 
       <section className="py-12">
         <div className="container-pro">
-          <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1"><MapPin className="h-4 w-4 text-accent" /> {loc.county}</span>
-            <span className="flex items-center gap-1"><Mountain className="h-4 w-4 text-accent" /> Elevation {loc.elevation}</span>
-            <span className="flex items-center gap-1"><Building2 className="h-4 w-4 text-accent" /> Pop. {loc.population}</span>
-          </div>
-          <h1 className="mt-4 font-heading text-4xl font-bold text-primary sm:text-5xl">Radon Mitigation & Testing in {loc.town}, CO</h1>
-          <p className="mt-5 max-w-3xl text-lg text-muted-foreground">{loc.geography}</p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-2.5 font-semibold text-accent-foreground hover:bg-accent/90">
-              Get a Free Estimate <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a href={company.phoneHref} className="inline-flex items-center justify-center gap-2 rounded-md border border-primary px-5 py-2.5 font-semibold text-primary hover:bg-muted">
-              <Phone className="h-4 w-4" /> {company.phone}
-            </a>
-          </div>
+          <ScrollReveal>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1"><MapPin className="h-4 w-4 text-accent" /> {loc.county}</span>
+              <span className="flex items-center gap-1"><Mountain className="h-4 w-4 text-accent" /> Elevation {loc.elevation}</span>
+              <span className="flex items-center gap-1"><Building2 className="h-4 w-4 text-accent" /> Pop. {loc.population}</span>
+            </div>
+            <h1 className="mt-4 font-heading text-4xl font-bold text-primary sm:text-5xl">Radon Mitigation & Testing in {loc.town}, CO</h1>
+            <p className="mt-5 max-w-3xl text-lg text-muted-foreground">{loc.geography}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-2.5 font-semibold text-accent-foreground hover:bg-accent/90">
+                Get a Free Estimate <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href={company.phoneHref} className="inline-flex items-center justify-center gap-2 rounded-md border border-primary px-5 py-2.5 font-semibold text-primary hover:bg-muted">
+                <Phone className="h-4 w-4" /> {company.phone}
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -77,7 +83,7 @@ const LocationPage = () => {
             </div>
             <div>
               <h2 className="font-heading text-2xl font-bold text-primary">Services Available in {loc.town}</h2>
-              <p className="mt-3 text-muted-foreground">All Phase Radon provides the full range of radon services to {loc.town} homeowners, buyers, sellers, and realtors:</p>
+              <p className="mt-3 text-muted-foreground">Foothills Radon Testing and Mitigation provides the full range of radon services to {loc.town} homeowners, buyers, sellers, and realtors:</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {services.map((s) => (
                   <Link key={s.slug} to={`/services/${s.slug}`} className="group flex items-center gap-2 rounded-lg border border-border bg-card p-3 text-sm shadow-sm hover:border-accent">
@@ -115,6 +121,26 @@ const LocationPage = () => {
               </ul>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="bg-muted/40 py-12">
+        <div className="container-pro">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="flex items-center justify-center gap-1">
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
+            </div>
+            <h2 className="mt-3 font-heading text-2xl font-bold text-primary sm:text-3xl">What {loc.town} Neighbors Say</h2>
+            <p className="mt-2 text-muted-foreground">Real reviews from foothills homeowners we've helped.</p>
+          </div>
+          <div className="mt-8">
+            <ReviewSnippet town={loc.town} count={2} />
+          </div>
+          <div className="mt-6 text-center">
+            <Link to="/reviews" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+              Read all reviews <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
