@@ -11,46 +11,125 @@ import { company, stats, heroImage, geologyImage } from "@/data/site";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
 import { reviews } from "@/data/reviews";
+import { useEffect, useRef, useState } from "react";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { LazyImage } from "@/components/LazyImage";
 
 const iconMap: Record<string, React.ElementType> = {
   FlaskConical, Wind, Layers, Wrench, ClipboardCheck, Hammer, Home, Building2,
 };
 
 const Index = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const handleScroll = () => {
+      if (heroRef.current) {
+        setScrollY(window.scrollY);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Layout>
       <SEO
-        title="All Phase Radon — Radon Testing & Mitigation in the Colorado Foothills"
+        title="Foothills Radon Testing and Mitigation — Radon Testing & Mitigation in the Colorado Foothills"
         description="Locally owned radon testing & mitigation serving Pine, Conifer, Evergreen & the HWY 285 corridor. NRPP certified, insured, one-day installs. Free estimates."
         schema={localBusinessSchema}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Colorado foothills mountain homes along the HWY 285 corridor" className="h-full w-full object-cover opacity-30" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40" />
+      {/* Hero with parallax */}
+      <section ref={heroRef} className="relative min-h-[600px] overflow-hidden bg-primary text-primary-foreground">
+        {/* Parallax background image - more visible, extends beyond viewport */}
+        <div
+          className="absolute inset-0"
+          style={{
+            transform: `translateY(${scrollY * 0.4}px) scale(1.15)`,
+            willChange: "transform",
+          }}
+        >
+          <img
+            src={heroImage}
+            alt="Colorado foothills mountain homes along the HWY 285 corridor"
+            className="h-full w-full object-cover"
+            style={{ opacity: 0.55 }}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
         </div>
-        <div className="container-pro relative py-16 sm:py-24">
+        {/* Gradient overlay - lighter to show more of the image */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/50 to-transparent"
+          style={{ opacity: Math.max(0.5, 1 - scrollY / 600) }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
+
+        <div className="container-pro relative flex min-h-[600px] items-center py-20 sm:py-28">
           <div className="max-w-2xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-3 py-1 text-sm font-medium text-accent">
+            {/* Fade-in badge */}
+            <div
+              className="mb-5 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent backdrop-blur-sm"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(20px)",
+                transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+              }}
+            >
               <ShieldCheck className="h-4 w-4" /> Locally Owned · NRPP Certified · Serving the 285 Corridor
             </div>
-            <h1 className="font-heading text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl">
+            {/* Fade-in headline */}
+            <h1
+              className="font-heading text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(30px)",
+                transition: "opacity 0.8s ease-out 0.15s, transform 0.8s ease-out 0.15s",
+              }}
+            >
               Colorado's Foothills Have a Radon Problem. We Fix It.
             </h1>
-            <p className="mt-5 text-lg text-primary-foreground/90">
-              All Phase Radon is your locally owned radon testing and mitigation company based in {company.baseTown}. We serve the Jefferson County and Park County foothills — Pine, Conifer, Evergreen, Bailey, and every town along the way.
+            {/* Fade-in subheadline */}
+            <p
+              className="mt-6 text-lg text-primary-foreground/90 sm:text-xl"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(30px)",
+                transition: "opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s",
+              }}
+            >
+              Foothills Radon Testing and Mitigation is your locally owned radon testing and mitigation company based in {company.baseTown}. We serve the Jefferson County and Park County foothills — Pine, Conifer, Evergreen, Bailey, and every town along the way.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-accent-foreground shadow-lg hover:bg-accent/90">
+            {/* Fade-in CTAs */}
+            <div
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(30px)",
+                transition: "opacity 0.8s ease-out 0.45s, transform 0.8s ease-out 0.45s",
+              }}
+            >
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-accent-foreground shadow-lg transition hover:scale-105 hover:bg-accent/90">
                 Get a Free Estimate <ArrowRight className="h-5 w-5" />
               </Link>
-              <a href={company.phoneHref} className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10">
+              <a href={company.phoneHref} className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10">
                 <Phone className="h-5 w-5" /> {company.phone}
               </a>
             </div>
-            <div className="mt-6 flex items-center gap-2 text-sm text-primary-foreground/80">
+            {/* Fade-in rating */}
+            <div
+              className="mt-6 flex items-center gap-2 text-sm text-primary-foreground/80"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(20px)",
+                transition: "opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s",
+              }}
+            >
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
               </div>
@@ -58,18 +137,32 @@ const Index = () => {
             </div>
           </div>
         </div>
+        {/* Scroll indicator */}
+        <div
+          className="absolute bottom-6 left-1/2 -translate-x-1/2"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transition: "opacity 1s ease-out 1s",
+          }}
+        >
+          <div className="flex h-10 w-6 justify-center rounded-full border-2 border-primary-foreground/40 p-1">
+            <div className="h-2 w-1 animate-bounce rounded-full bg-primary-foreground/60" />
+          </div>
+        </div>
       </section>
 
       {/* Stats bar */}
       <section className="border-b border-border bg-secondary">
         <div className="container-pro grid gap-6 py-10 sm:grid-cols-3">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="font-heading text-4xl font-bold text-primary">
-                {s.value}<span className="text-xl text-accent">{s.unit && ` ${s.unit}`}</span>
+          {stats.map((s, i) => (
+            <ScrollReveal key={s.label} delay={i * 100}>
+              <div className="text-center">
+                <div className="font-heading text-4xl font-bold text-primary">
+                  {s.value}<span className="text-xl text-accent">{s.unit && ` ${s.unit}`}</span>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -77,28 +170,36 @@ const Index = () => {
       {/* Services overview */}
       <section className="py-16">
         <div className="container-pro">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">Our Radon Services</h2>
-            <p className="mt-3 text-muted-foreground">From testing to mitigation to crawl space encapsulation — we handle every phase of radon, start to finish.</p>
+          <ScrollReveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">Our Radon Services</h2>
+              <p className="mt-3 text-muted-foreground">From testing to mitigation to crawl space encapsulation — we handle every phase of radon, start to finish.</p>
+            </div>
+          </ScrollReveal>
+          <div className="mt-8 text-center">
+            <Link to="/services" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+              View all services <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => {
+            {services.map((service, i) => {
               const Icon = iconMap[service.icon] || Wind;
               return (
-                <Link
-                  key={service.slug}
-                  to={`/services/${service.slug}`}
-                  className="group rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-accent hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-4 font-heading text-lg font-bold text-primary group-hover:text-accent">{service.shortTitle}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{service.excerpt}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-                    Learn more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
-                </Link>
+                <ScrollReveal key={service.slug} delay={i * 80}>
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="group block h-full rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-accent hover:shadow-md"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="mt-4 font-heading text-lg font-bold text-primary group-hover:text-accent">{service.shortTitle}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{service.excerpt}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                      Learn more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -108,46 +209,54 @@ const Index = () => {
       {/* Why the foothills are different */}
       <section className="bg-muted/40 py-16">
         <div className="container-pro grid items-center gap-10 lg:grid-cols-2">
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">Why the Foothills Are Different</h2>
-            <div className="mt-5 space-y-4 text-muted-foreground">
-              <p>The Front Range and foothills sit on the Pikes Peak Batholith — a massive granite formation rich in uranium-bearing minerals. As that uranium decays underground, it releases radon gas that travels through fractured rock and soil straight into your home's foundation.</p>
-              <p>At elevations above 7,000 feet, foothills homes from Pine to Evergreen to Bailey sit close to that fractured bedrock with thin soil cover. The cold mountain climate strengthens the stack effect, actively pulling radon-laden soil gas up through basement floors and crawl spaces. Add in the prevalence of basement foundations, and it's no surprise Jefferson County and Park County homes test on the upper end of the state range.</p>
-              <p>Colorado is in the top 10 states for radon nationwide, and the entire state is EPA Radon Zone 1. The geology isn't going to change — but a properly installed mitigation system makes your indoor air safe regardless of what's beneath your home.</p>
+          <ScrollReveal>
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">Why the Foothills Are Different</h2>
+              <div className="mt-5 space-y-4 text-muted-foreground">
+                <p>The Front Range and foothills sit on the Pikes Peak Batholith — a massive granite formation rich in uranium-bearing minerals. As that uranium decays underground, it releases radon gas that travels through fractured rock and soil straight into your home's foundation.</p>
+                <p>At elevations above 7,000 feet, foothills homes from Pine to Evergreen to Bailey sit close to that fractured bedrock with thin soil cover. The cold mountain climate strengthens the stack effect, actively pulling radon-laden soil gas up through basement floors and crawl spaces. Add in the prevalence of basement foundations, and it's no surprise Jefferson County and Park County homes test on the upper end of the state range.</p>
+                <p>Colorado is in the top 10 states for radon nationwide, and the entire state is EPA Radon Zone 1. The geology isn't going to change — but a properly installed mitigation system makes your indoor air safe regardless of what's beneath your home.</p>
+              </div>
+              <Link to="/blog/colorado-radon-geology-granite-front-range" className="mt-6 inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+                Read the full geology breakdown <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-            <Link to="/blog/colorado-radon-geology-granite-front-range" className="mt-6 inline-flex items-center gap-1 font-semibold text-accent hover:underline">
-              Read the full geology breakdown <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <img src={geologyImage} alt="Granite rock formation with uranium-bearing mineral veins in the Colorado Front Range foothills" className="h-full w-full object-cover" loading="lazy" />
-          </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <div className="overflow-hidden rounded-xl shadow-lg">
+              <LazyImage src={geologyImage} alt="Granite rock formation with uranium-bearing mineral veins in the Colorado Front Range foothills" className="h-full w-full object-cover" />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* How it works */}
       <section className="py-16">
         <div className="container-pro">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">How It Works</h2>
-            <p className="mt-3 text-muted-foreground">Three simple steps from worry to clean air.</p>
-          </div>
+          <ScrollReveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl">How It Works</h2>
+              <p className="mt-3 text-muted-foreground">Three simple steps from worry to clean air.</p>
+            </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {[
               { num: "1", title: "Test", icon: FlaskConical, body: "We place an EPA-approved monitor for 2–7 days. You get a clear written report with your real pCi/L number — no guesswork." },
               { num: "2", title: "Assess", icon: ClipboardCheck, body: "If your level is elevated, we inspect your foundation and design a mitigation system tailored to your home — with a firm written estimate." },
               { num: "3", title: "Mitigate", icon: TrendingDown, body: "Most installs finish in one day. We verify with a post-install test so you know your radon dropped well below the action level." },
-            ].map((step) => {
+            ].map((step, i) => {
               const Icon = step.icon;
               return (
-                <div key={step.num} className="relative rounded-xl border border-border bg-card p-6 text-center shadow-sm">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                    <Icon className="h-7 w-7" />
+                <ScrollReveal key={step.num} delay={i * 150}>
+                  <div className="relative h-full rounded-xl border border-border bg-card p-6 text-center shadow-sm">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                      <Icon className="h-7 w-7" />
+                    </div>
+                    <div className="absolute right-4 top-4 font-heading text-3xl font-bold text-muted/60">{step.num}</div>
+                    <h3 className="mt-4 font-heading text-xl font-bold text-primary">{step.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{step.body}</p>
                   </div>
-                  <div className="absolute right-4 top-4 font-heading text-3xl font-bold text-muted/60">{step.num}</div>
-                  <h3 className="mt-4 font-heading text-xl font-bold text-primary">{step.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{step.body}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -157,21 +266,25 @@ const Index = () => {
       {/* Trust signals */}
       <section className="bg-primary py-16 text-primary-foreground">
         <div className="container-pro">
-          <h2 className="text-center font-heading text-3xl font-bold sm:text-4xl">Why Foothills Homeowners Trust All Phase Radon</h2>
+          <ScrollReveal>
+            <h2 className="text-center font-heading text-3xl font-bold sm:text-4xl">Why Foothills Homeowners Trust Foothills Radon</h2>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Award, value: `${company.yearsInBusiness} years`, label: "Serving the foothills" },
               { icon: ShieldCheck, value: "NRPP & DORA", label: "Certified & registered" },
               { icon: TrendingDown, value: `${company.systemsInstalled}+`, label: "Systems installed" },
               { icon: Clock, value: "1 day", label: "Most installs complete" },
-            ].map((item) => {
+            ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={item.label} className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 text-center">
-                  <Icon className="mx-auto h-8 w-8 text-accent" />
-                  <div className="mt-3 font-heading text-2xl font-bold">{item.value}</div>
-                  <div className="mt-1 text-sm text-primary-foreground/70">{item.label}</div>
-                </div>
+                <ScrollReveal key={item.label} delay={i * 100}>
+                  <div className="h-full rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 text-center">
+                    <Icon className="mx-auto h-8 w-8 text-accent" />
+                    <div className="mt-3 font-heading text-2xl font-bold">{item.value}</div>
+                    <div className="mt-1 text-sm text-primary-foreground/70">{item.label}</div>
+                  </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -181,6 +294,11 @@ const Index = () => {
             ))}
             <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent" /> Written warranties</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent" /> Transferable to new owners</span>
+          </div>
+          <div className="mt-6 text-center">
+            <Link to="/certifications" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              See our full credentials & warranty details <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -209,8 +327,8 @@ const Index = () => {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/service-area" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
-              View full service area <ArrowRight className="h-4 w-4" />
+            <Link to="/locations" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+              Browse all service areas <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -249,7 +367,7 @@ const Index = () => {
       </section>
 
       {/* Real estate CTA */}
-      <section className="bg-amber-50 py-16">
+      <section className="bg-secondary py-16">
         <div className="container-pro">
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>
