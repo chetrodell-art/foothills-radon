@@ -68,6 +68,7 @@ export const localBusinessSchema = {
     postalCode: "80470",
     addressCountry: "US",
   },
+  description: "Locally owned radon testing & mitigation serving the Jefferson County and Park County foothills along the HWY 285 corridor.",
   areaServed: [
     { "@type": "AdministrativeArea", name: "Jefferson County, CO" },
     { "@type": "AdministrativeArea", name: "Park County, CO" },
