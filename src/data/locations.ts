@@ -102,7 +102,7 @@ export const locations: LocationInfo[] = [
     faqs: [
       {
         q: "Are you actually based in Pine?",
-        a: "Yes — Foothills Radon Testing and Mitigation is locally owned and headquartered right here in Pine. We know the area, the geology, and the home styles because it's our community.",
+        a: "Yes — Foothills Radon Testing and Mitigation is locally based right here in Pine. We know the area, the geology, and the home styles because it's our community.",
       },
       {
         q: "How common is high radon in Pine?",
