@@ -33,7 +33,7 @@ const LocationsHub = () => {
           <ScrollReveal>
             <h1 className="font-heading text-4xl font-bold text-primary sm:text-5xl">Colorado Foothills Radon Service Areas</h1>
             <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
-              Foothills Radon Testing and Mitigation serves homeowners, realtors, builders, and businesses throughout Colorado's mountain communities and Front Range foothills. We're based in Pine and travel the entire HWY 285 corridor — from Jefferson County through Park County and into Clear Creek County. Click your town below for local radon information, average readings, and service details specific to your community.
+              Browse every community we serve along the HWY 285 corridor. Each town below has its own page with local radon information — average readings, geology, common home styles, and what to expect. For a visual overview of our entire coverage area, see our <Link to="/service-area" className="font-semibold text-accent hover:underline">service area map</Link>.
             </p>
           </ScrollReveal>
         </div>
@@ -95,9 +95,9 @@ const LocationsHub = () => {
                 </Link>
               </div>
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-primary-foreground/70">
-                {company.certifications.map((c) => (
-                  <span key={c} className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> {c}</span>
-                ))}
+                <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> Qualified professionals</span>
+                <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> Free estimates</span>
+                <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> Locally based in Pine, CO</span>
               </div>
             </div>
           </ScrollReveal>
