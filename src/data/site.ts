@@ -1,10 +1,10 @@
 export const company = {
-  name: "All Phase Radon",
-  shortName: "All Phase Radon",
-  phone: "(303) 555-0142",
-  phoneHref: "tel:+13035550142",
-  email: "info@allphaseradon.com",
-  emailHref: "mailto:info@allphaseradon.com",
+  name: "Foothills Radon Testing and Mitigation",
+  shortName: "Foothills Radon",
+  phone: "(303) 816-3130",
+  phoneHref: "tel:+13038163130",
+  email: "info@foothillsradon.com",
+  emailHref: "mailto:info@foothillsradon.com",
   baseTown: "Pine, Colorado",
   baseAddress: "Pine, CO 80470",
   serviceRegion: "Jefferson County & Park County foothills along the HWY 285 corridor",
@@ -26,11 +26,12 @@ export const stats = [
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Services", to: "/services/radon-mitigation" },
-  { label: "Service Area", to: "/service-area" },
+  { label: "Services", to: "/services", hasDropdown: "services" },
+  { label: "Service Area", to: "/locations", hasDropdown: "locations" },
   { label: "Realtors", to: "/realtors" },
+  { label: "Credentials", to: "/certifications" },
   { label: "Reviews", to: "/reviews" },
-  { label: "Blog", to: "/blog/radon-levels-colorado-foothills" },
+  { label: "Resources", to: "/blog", hasDropdown: "resources" },
   { label: "Contact", to: "/contact" },
 ];
 
