@@ -4,9 +4,9 @@ import { SEO, breadcrumbSchema, articleSchema, faqSchema } from "@/components/se
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
-import { EstimateForm } from "@/components/EstimateForm";
+
 import { blogMap, blogPosts } from "@/data/blog";
-import { services } from "@/data/services";
+import { serviceMap } from "@/data/services";
 import { company } from "@/data/site";
 import NotFound from "./NotFound";
 import { LazyImage } from "@/components/LazyImage";
@@ -17,6 +17,8 @@ const BlogPostPage = () => {
   const post = slug ? blogMap[slug] : undefined;
 
   if (!post) return <NotFound />;
+
+  const relatedServices = (post.relatedServiceSlugs || []).map((s) => serviceMap[s]).filter(Boolean);
 
   const schema = [
     breadcrumbSchema([
@@ -71,7 +73,7 @@ const BlogPostPage = () => {
 
             <div className="mt-8 rounded-xl bg-primary p-6 text-primary-foreground">
               <h3 className="font-heading text-xl font-bold">Need Help With Radon in the Foothills?</h3>
-              <p className="mt-2 text-primary-foreground/80">Foothills Radon Testing and Mitigation is locally owned, NRPP certified, and based in Pine, CO. Call us or request a free estimate — we respond within {company.responseHours}.</p>
+              <p className="mt-2 text-primary-foreground/80">Foothills Radon Testing and Mitigation connects foothills homeowners with qualified radon professionals. Locally based in Pine, CO. Call us or request a free estimate — we respond within {company.responseHours}.</p>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                 <a href={company.phoneHref} className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-2.5 font-semibold text-accent-foreground hover:bg-accent/90">
                   <Phone className="h-4 w-4" /> {company.phone}
@@ -84,11 +86,17 @@ const BlogPostPage = () => {
           </div>
 
           <aside className="space-y-6">
-            <EstimateForm />
+            <Link to="/contact" className="block rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-accent hover:shadow-md">
+              <h3 className="font-heading text-lg font-bold text-primary">Get a Free Estimate</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Quick form — we respond within {company.responseHours}. No obligation.</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">
+                Start here <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
             <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-              <h3 className="font-heading text-lg font-bold text-primary">Our Radon Services</h3>
+              <h3 className="font-heading text-lg font-bold text-primary">Related Radon Services</h3>
               <ul className="mt-3 space-y-2">
-                {services.slice(0, 5).map((s) => (
+                {relatedServices.map((s) => (
                   <li key={s.slug}>
                     <Link to={`/services/${s.slug}`} className="flex items-start gap-2 text-sm text-foreground hover:text-accent">
                       <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
