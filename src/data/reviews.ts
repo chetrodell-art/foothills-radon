@@ -7,59 +7,52 @@ export interface Review {
   service: string;
 }
 
+// Real client reviews for our partner radon contractors
 export const reviews: Review[] = [
   {
-    name: "Dana R.",
-    town: "Conifer, CO",
+    name: "Leslee M.",
+    town: "Pine, CO",
     rating: 5,
     date: "March 2026",
     service: "Radon Mitigation",
-    text: "Our Conifer home tested at 11.2 pCi/L — way above the EPA limit. Foothills Radon installed a sub-slab system in one day and our follow-up test came back at 0.6 pCi/L. They explained every step like a neighbor, not a salesman. Worth every penny.",
+    text: "The technician was very friendly, efficient, and professional. Our mitigation system was installed in about 4 hours. The system looked clean on the inside and outside. We retested our radon level after installation and it was significantly lower. Highly recommend!",
   },
   {
-    name: "Mike T.",
-    town: "Evergreen, CO",
+    name: "Elliot H.",
+    town: "Conifer, CO",
     rating: 5,
     date: "February 2026",
-    service: "Real Estate Radon Test",
-    text: "We were selling our Evergreen house and the buyer's radon test came in high. All Phase had a mitigation system in before our closing date and provided a written report for the buyers. Our realtor said she'd never seen a smoother radon contingency.",
+    service: "Radon Mitigation & Testing",
+    text: "After getting quotes from multiple places, we're so glad we used Foothills Radon to connect us with our technician. He was extremely friendly and helpful, willing to explain everything and worked with us in phases to make it affordable.",
   },
   {
-    name: "Sarah K.",
-    town: "Bailey, CO",
+    name: "Eric R.",
+    town: "Evergreen, CO",
     rating: 5,
     date: "January 2026",
-    service: "Crawl Space Encapsulation",
-    text: "Living in Bailey with a dirt crawlspace, I always worried about radon. They encapsulated the crawlspace and added a fan — my test dropped from 8.4 to under 1.0. Clean work, on time, and they hauled off every scrap.",
+    service: "Radon Fan Replacement",
+    text: "They installed a new fan into my passive radon system that wasn't working and turned it into an active system. Almost immediately our radon levels dropped to less than 1 pCi/L and have stayed there ever since. Very professional and completed quickly.",
   },
   {
-    name: "Jim P.",
-    town: "Pine, CO",
+    name: "Jamie B.",
+    town: "Bailey, CO",
     rating: 5,
     date: "December 2025",
-    service: "Fan Replacement",
-    text: "My old mitigation fan was rattling and clearly dying after nine years. All Phase swapped it for a quieter, more efficient unit in a couple hours. Same-day call back, fair price, no upsell.",
+    service: "Radon Testing & Mitigation",
+    text: "We have owned our house for 15 years but didn't realize we needed to retest. The technician was super informative and really walked us through the process. Professional, punctual, and precise — got the job done quickly!",
   },
   {
-    name: "Lauren M.",
+    name: "Bret R.",
     town: "Morrison, CO",
     rating: 5,
     date: "November 2025",
-    service: "Radon Testing",
-    text: "I'm a realtor in Morrison and I now send every client to Foothills Radon. Fast scheduling, clear written reports, and they actually pick up the phone. The transferable warranty is a huge selling point for my buyers.",
-  },
-  {
-    name: "Tom & Beth H.",
-    town: "Idledale, CO",
-    rating: 5,
-    date: "October 2025",
     service: "Radon Mitigation",
-    text: "Honest folks. They told us our 3.6 pCi/L reading was borderline and gave us the option to monitor before spending money on a system. We monitored, it climbed, and they installed. No pressure, just straight talk.",
+    text: "Promptly performed an initial test and developed a cost-effective solution. Installation was on time and within budget with outstanding attention to detail. Post-installation test results exceeded our expectations!",
   },
 ];
 
 export const reviewStats = {
   average: 4.9,
-  count: 187,
-  platform: "Google",
+  count: 150,
+  platform: "Google Reviews",
 };
