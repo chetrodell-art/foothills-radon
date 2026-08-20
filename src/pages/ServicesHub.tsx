@@ -34,7 +34,7 @@ const ServicesHub = () => {
           <ScrollReveal>
             <h1 className="font-heading text-4xl font-bold text-primary sm:text-5xl">Radon Services for Colorado Foothills Homes</h1>
             <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
-              From your first radon test to long-term system maintenance, Foothills Radon Testing and Mitigation handles every phase of radon — testing, mitigation, crawl space encapsulation, fan repair, real estate transactions, new construction, and commercial properties. We serve homeowners, buyers, sellers, realtors, builders, and businesses throughout Jefferson County, Park County, and the HWY 285 corridor.
+              From your first radon test to long-term system maintenance, we connect you with qualified professionals who handle every phase of radon — testing, mitigation, crawl space encapsulation, fan repair, real estate transactions, new construction, and commercial properties. We serve homeowners, buyers, sellers, realtors, builders, and businesses throughout Jefferson County, Park County, and the HWY 285 corridor.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
@@ -89,9 +89,9 @@ const ServicesHub = () => {
           </ScrollReveal>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {[
-              { num: "1", title: "Test", icon: FlaskConical, body: "We place an EPA-approved monitor for 2–7 days and deliver a clear written report with your real pCi/L number." },
-              { num: "2", title: "Assess", icon: ClipboardCheck, body: "If your level is elevated, we inspect your foundation and design a mitigation system tailored to your home." },
-              { num: "3", title: "Mitigate", icon: Wind, body: "Most installs finish in one day. We verify with a post-install test so you know your radon dropped below action level." },
+              { num: "1", title: "Test", icon: FlaskConical, body: "A qualified professional places an EPA-approved monitor for 2–7 days and delivers a clear written report with your real pCi/L number." },
+              { num: "2", title: "Assess", icon: ClipboardCheck, body: "If your level is elevated, the professional inspects your foundation and designs a mitigation system tailored to your home." },
+              { num: "3", title: "Mitigate", icon: Wind, body: "Most installs finish in one day. A post-install test verifies your radon dropped below action level." },
             ].map((step, i) => {
               const Icon = step.icon;
               return (
@@ -117,11 +117,10 @@ const ServicesHub = () => {
           <ScrollReveal>
             <div className="rounded-xl border border-border bg-card p-8 text-center shadow-sm">
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                {company.certifications.map((c) => (
-                  <span key={c} className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> {c}</span>
-                ))}
+                <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent" /> Qualified professionals</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent" /> Written warranties</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent" /> Transferable to new owners</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent" /> Free estimates</span>
               </div>
               <h2 className="mt-6 font-heading text-3xl font-bold text-primary">Ready to Get Started?</h2>
               <p className="mt-3 text-muted-foreground">Call us now or request a free estimate online. We respond within {company.responseHours}.</p>
