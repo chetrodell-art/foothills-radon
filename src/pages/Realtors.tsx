@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, Clock, FileCheck, BadgeCheck, ArrowRight, Phone, CheckCircle2, Home } from "lucide-react";
+import { ShieldCheck, Clock, FileCheck, BadgeCheck, ArrowRight, Phone, CheckCircle2, Home, Star } from "lucide-react";
 import { SEO, breadcrumbSchema } from "@/components/seo";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { ReviewSnippet } from "@/components/ReviewSnippet";
 import { useState } from "react";
 import { company } from "@/data/site";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Realtors = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -16,8 +18,8 @@ const Realtors = () => {
   return (
     <Layout>
       <SEO
-        title="Realtor Partner Program | All Phase Radon | Colorado Foothills"
-        description="Partner with All Phase Radon for fast radon testing, mitigation & transferable warranties that keep your Colorado real estate closings on track. Realtor program."
+        title="Realtor Partner Program | Foothills Radon Testing and Mitigation | Colorado Foothills"
+        description="Partner with Foothills Radon Testing and Mitigation for fast radon testing, mitigation & transferable warranties that keep your Colorado real estate closings on track. Realtor program."
         path="/realtors"
         schema={breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -33,7 +35,7 @@ const Realtors = () => {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-3 py-1 text-sm font-medium text-accent">
               <ShieldCheck className="h-4 w-4" /> Colorado Radon Disclosure Required
             </div>
-            <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl">Help Your Clients Close Faster. Partner with All Phase Radon.</h1>
+<h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl">Help Your Clients Close Faster. Partner with Foothills Radon Testing and Mitigation.</h1>
             <p className="mt-5 text-lg text-primary-foreground/90">
               Radon is one of the most common inspection contingencies in foothills real estate. We make it easy — fast scheduling, written reports, rapid mitigation, and transferable warranties that give your buyers confidence and keep your closings on schedule.
             </p>
@@ -52,38 +54,42 @@ const Realtors = () => {
       {/* Disclosure law overview */}
       <section className="py-12">
         <div className="container-pro grid gap-10 lg:grid-cols-2">
-          <div>
-            <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Colorado Radon Disclosure Law: The Basics</h2>
-            <div className="mt-4 space-y-4 text-muted-foreground">
-              <p>Colorado requires sellers to disclose known radon test results and the presence of any radon mitigation system in the property. As a realtor, you play a key role in ensuring disclosure compliance and managing radon contingencies.</p>
-              <p>In a Zone 1 state where the average home tests at 6.4 pCi/L, radon testing is a standard part of most foothills inspection periods. A high reading doesn't have to derail a deal — a fast, professional mitigation system with a transferable warranty usually satisfies the contingency and keeps the closing on track.</p>
-              <p>We provide the documentation — signed reports, system specs, and warranty details — that satisfies disclosure and contingency requirements so your transaction file is clean.</p>
+          <ScrollReveal>
+            <div>
+              <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Colorado Radon Disclosure Law: The Basics</h2>
+              <div className="mt-4 space-y-4 text-muted-foreground">
+                <p>Colorado requires sellers to disclose known radon test results and the presence of any radon mitigation system in the property. As a realtor, you play a key role in ensuring disclosure compliance and managing radon contingencies.</p>
+                <p>In a Zone 1 state where the average home tests at 6.4 pCi/L, radon testing is a standard part of most foothills inspection periods. A high reading doesn't have to derail a deal — a fast, professional mitigation system with a transferable warranty usually satisfies the contingency and keeps the closing on track.</p>
+                <p>We provide the documentation — signed reports, system specs, and warranty details — that satisfies disclosure and contingency requirements so your transaction file is clean.</p>
+              </div>
+              <Link to="/blog/colorado-radon-real-estate-disclosure-law" className="mt-6 inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+                Read the full disclosure law guide <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-            <Link to="/blog/radon-colorado-disclosure-law-explained" className="mt-6 inline-flex items-center gap-1 font-semibold text-accent hover:underline">
-              Read the full disclosure law guide <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-            <h3 className="font-heading text-lg font-bold text-primary">What We Offer Realtors</h3>
-            <ul className="mt-4 space-y-3">
-              {[
-                { icon: Clock, text: "Fast scheduling — often same-week testing and mitigation" },
-                { icon: FileCheck, text: "Signed written reports suitable for transaction disclosures" },
-                { icon: CheckCircle2, text: "Post-install verification testing with documentation" },
-                { icon: BadgeCheck, text: "Transferable warranties that give buyers confidence" },
-                { icon: ShieldCheck, text: "NRPP certified, DORA registered, fully insured" },
-                { icon: Phone, text: "A partner who picks up the phone and meets your deadlines" },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <li key={item.text} className="flex items-start gap-3">
-                    <Icon className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                    <span className="text-sm text-foreground">{item.text}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+              <h3 className="font-heading text-lg font-bold text-primary">What We Offer Realtors</h3>
+              <ul className="mt-4 space-y-3">
+                {[
+                  { icon: Clock, text: "Fast scheduling — often same-week testing and mitigation" },
+                  { icon: FileCheck, text: "Signed written reports suitable for transaction disclosures" },
+                  { icon: CheckCircle2, text: "Post-install verification testing with documentation" },
+                  { icon: BadgeCheck, text: "Transferable warranties that give buyers confidence" },
+                  { icon: ShieldCheck, text: "NRPP certified, DORA registered, fully insured" },
+                  { icon: Phone, text: "A partner who picks up the phone and meets your deadlines" },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={item.text} className="flex items-start gap-3">
+                      <Icon className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                      <span className="text-sm text-foreground">{item.text}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -107,10 +113,26 @@ const Realtors = () => {
         </div>
       </section>
 
+      {/* Realtor testimonials */}
+      <section className="py-12">
+        <div className="container-pro">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="flex items-center justify-center gap-1">
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
+            </div>
+            <h2 className="mt-3 font-heading text-2xl font-bold text-primary sm:text-3xl">What Realtors & Clients Say</h2>
+            <p className="mt-2 text-muted-foreground">From smooth radon contingencies to fast closings — here's what agents and homeowners tell us.</p>
+          </div>
+          <div className="mt-8">
+            <ReviewSnippet count={3} />
+          </div>
+        </div>
+      </section>
+
       {/* Partner form */}
       <section id="partner" className="py-12">
         <div className="container-pro max-w-2xl">
-          <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Become an All Phase Radon Partner</h2>
+          <h2 className="font-heading text-2xl font-bold text-primary sm:text-3xl">Become a Foothills Radon Partner</h2>
           <p className="mt-3 text-muted-foreground">Fill out the form below and we'll reach out to set up your partnership. Prefer to call? {company.phone}.</p>
           {submitted ? (
             <div className="mt-6 rounded-xl border border-border bg-card p-8 text-center shadow-sm">
@@ -136,7 +158,7 @@ const Realtors = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
                   <Label htmlFor="r-phone">Phone *</Label>
-                  <Input id="r-phone" type="tel" required placeholder="(303) 555-0100" />
+                <Input id="r-phone" type="tel" required placeholder="(303) 816-3130" />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="r-email">Email *</Label>
