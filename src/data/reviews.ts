@@ -14,7 +14,7 @@ export const reviews: Review[] = [
     rating: 5,
     date: "March 2026",
     service: "Radon Mitigation",
-    text: "Our Conifer home tested at 11.2 pCi/L — way above the EPA limit. All Phase Radon installed a sub-slab system in one day and our follow-up test came back at 0.6 pCi/L. They explained every step like a neighbor, not a salesman. Worth every penny.",
+    text: "Our Conifer home tested at 11.2 pCi/L — way above the EPA limit. Foothills Radon installed a sub-slab system in one day and our follow-up test came back at 0.6 pCi/L. They explained every step like a neighbor, not a salesman. Worth every penny.",
   },
   {
     name: "Mike T.",
@@ -46,7 +46,7 @@ export const reviews: Review[] = [
     rating: 5,
     date: "November 2025",
     service: "Radon Testing",
-    text: "I'm a realtor in Morrison and I now send every client to All Phase Radon. Fast scheduling, clear written reports, and they actually pick up the phone. The transferable warranty is a huge selling point for my buyers.",
+    text: "I'm a realtor in Morrison and I now send every client to Foothills Radon. Fast scheduling, clear written reports, and they actually pick up the phone. The transferable warranty is a huge selling point for my buyers.",
   },
   {
     name: "Tom & Beth H.",
